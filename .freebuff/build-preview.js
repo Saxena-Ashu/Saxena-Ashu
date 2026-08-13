@@ -164,6 +164,16 @@ try {
   const snakeSvg = fs.readFileSync(path.join(__dirname, 'snake.svg'), 'utf8');
   html = html.replace(/<picture>[\s\S]*?<\/picture>/, snakeSvg);
 } catch {}
+// Preview-only: replace the README's auto-rally ping pong SVG (GitHub can't
+// run JavaScript) with the interactive game from pong-game.html, which is
+// playable with mouse/keys, scores to 7, and captures the max score.
+try {
+  const pong = fs.readFileSync(path.join(__dirname, 'pong-game.html'), 'utf8');
+  html = html.replace(
+    /<svg width="640"[\s\S]*?<\/svg>\s*<sub><i>auto-rally[^<]*<\/i><\/sub>/,
+    pong
+  );
+} catch {}
 // Fallback: if the picture block was already replaced, still rewrite any
 // remaining raw snake URL to the local copy for robustness.
 html = html.replaceAll(

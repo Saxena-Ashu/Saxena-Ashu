@@ -21,6 +21,13 @@ code blocks, and external badge images — and inlines the local snake SVG into
 the preview. No dependencies are installed; both scripts use only Node's
 built-in `fs`, `path`, and `https`.
 
+Two preview-only swaps in `build-preview.js` (GitHub cannot run these, so the
+README keeps static/auto versions):
+- the snake `<picture>` is replaced by the local `snake.svg` inline;
+- the auto-rally ping pong SVG is replaced by `.freebuff/pong-game.html`, a
+  fully playable canvas game (mouse / ↑↓ / W S, first to 7 points, max score
+  captured in localStorage, PNG capture button).
+
 ## Run the preview
 
 No server or port is needed. Register the generated file in static mode:

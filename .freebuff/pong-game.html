@@ -1,0 +1,152 @@
+<div align="center">
+<div style="max-width:560px;margin:0 auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">
+  <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;font-weight:bold;color:#00E676;">
+    <span id="pong-score">YOU 0 — 0 AI</span>
+    <span id="pong-max">MAX: 0</span>
+  </div>
+  <div style="position:relative;">
+    <canvas id="pong" width="560" height="300" style="display:block;width:100%;background:#0d1117;border:1px solid #30363d;border-radius:14px;cursor:none;"></canvas>
+    <div id="pong-overlay" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(13,17,23,.78);border-radius:14px;color:#e6edf3;text-align:center;">
+      <div id="pong-ov-title" style="font-size:20px;font-weight:bold;color:#00E676;">PING PONG</div>
+      <div id="pong-ov-text" style="font-size:12px;color:#8b949e;">move: mouse or ↑ ↓ / W S — first to 7 points</div>
+      <button id="pong-start" style="background:#161b22;border:1px solid #00E676;color:#00E676;border-radius:8px;padding:8px 22px;font-family:inherit;font-size:13px;font-weight:bold;cursor:pointer;">START</button>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:11px;color:#8b949e;">
+    <span>mouse / ↑ ↓ — first to 7</span>
+    <button id="pong-capture" style="background:none;border:1px solid #30363d;color:#00B0FF;border-radius:6px;padding:3px 10px;font-family:inherit;font-size:11px;cursor:pointer;">capture score</button>
+  </div>
+</div>
+</div>
+<script>
+(function () {
+  var cv = document.getElementById('pong');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var W = cv.width, H = cv.height;
+  var MAX = 7, MAXKEY = 'pongMaxScore';
+  var state = 'ready', winner = null, ps = 0, as = 0;
+  var maxScore = +(localStorage.getItem(MAXKEY) || 0);
+  var ball = { x: W / 2, y: H / 2, vx: 0, vy: 0, r: 6 };
+  var p = { y: H / 2 - 30, w: 12, h: 60 };
+  var a = { y: H / 2 - 30, w: 12, h: 60 };
+  var mouseY = null, keys = {}, last = performance.now();
+  var aiSpeed = 3.1;
+
+  function el(id) { return document.getElementById(id); }
+  var hud = el('pong-score'), maxEl = el('pong-max'), ov = el('pong-overlay'),
+      ovTitle = el('pong-ov-title'), ovText = el('pong-ov-text'),
+      startBtn = el('pong-start'), capBtn = el('pong-capture');
+
+  function renderMax() { maxEl.textContent = 'MAX: ' + maxScore; }
+  function hudUp() { hud.textContent = 'YOU ' + ps + ' — ' + as + ' AI'; }
+  function serve(dir) {
+    ball.x = W / 2; ball.y = H / 2 + (Math.random() * 40 - 20);
+    var ang = (Math.random() * 0.7 - 0.35), sp = 3.2;
+    ball.vx = dir * sp * Math.cos(ang); ball.vy = sp * Math.sin(ang);
+  }
+  function showOverlay(t, x, b) { ovTitle.textContent = t; ovText.textContent = x; startBtn.textContent = b; ov.style.display = 'flex'; }
+  function start() {
+    ps = 0; as = 0; winner = null; hudUp();
+    serve(ps >= as ? 1 : -1);
+    state = 'play'; ov.style.display = 'none';
+  }
+  function over(w) {
+    state = 'over'; winner = w;
+    if (w === 'p' && ps > maxScore) { maxScore = ps; localStorage.setItem(MAXKEY, String(maxScore)); }
+    renderMax();
+    showOverlay(w === 'p' ? 'YOU WIN' : 'AI WINS', 'final score — you ' + ps + ' : ' + as + ' AI', 'PLAY AGAIN');
+  }
+  function point(to) {
+    if (to === 'p') ps++; else as++;
+    hudUp();
+    if (ps >= MAX) return over('p');
+    if (as >= MAX) return over('a');
+    serve(to === 'p' ? 1 : -1);
+  }
+  function step(dt) {
+    if (state !== 'play') return;
+    var m = 6 * dt * 60;
+    if (mouseY !== null) {
+      var ty = mouseY - 20;
+      if (p.y + p.h / 2 < ty - 6) p.y += m; else if (p.y + p.h / 2 > ty + 6) p.y -= m;
+    }
+    if (keys.ArrowUp || keys.KeyW) p.y -= m;
+    if (keys.ArrowDown || keys.KeyS) p.y += m;
+    p.y = Math.max(4, Math.min(H - p.h - 4, p.y));
+    var target = ball.vx > 0 ? ball.y : H / 2, err = 7;
+    if (a.y + a.h / 2 < target - err) a.y += aiSpeed * dt * 60;
+    else if (a.y + a.h / 2 > target + err) a.y -= aiSpeed * dt * 60;
+    a.y = Math.max(4, Math.min(H - a.h - 4, a.y));
+    ball.x += ball.vx * dt * 60; ball.y += ball.vy * dt * 60;
+    if (ball.y - ball.r < 0) { ball.y = ball.r; ball.vy = Math.abs(ball.vy); }
+    if (ball.y + ball.r > H) { ball.y = H - ball.r; ball.vy = -Math.abs(ball.vy); }
+    if (ball.vx < 0 && ball.x - ball.r < p.w + 8 && ball.x > p.w - 6 && ball.y > p.y - 6 && ball.y < p.y + p.h + 6) {
+      var off = (ball.y - (p.y + p.h / 2)) / (p.h / 2);
+      ball.vx = Math.min(Math.abs(ball.vx) * 1.04, 8); ball.vy = off * 4.2;
+      ball.x = p.w + 8 + ball.r;
+    }
+    if (ball.vx > 0 && ball.x + ball.r > W - a.w - 8 && ball.x < W - a.w + 6 && ball.y > a.y - 6 && ball.y < a.y + a.h + 6) {
+      var off2 = (ball.y - (a.y + a.h / 2)) / (a.h / 2);
+      ball.vx = -Math.min(Math.abs(ball.vx) * 1.04, 8); ball.vy = off2 * 4.2;
+      ball.x = W - a.w - 8 - ball.r;
+    }
+    if (ball.x < -20) point('a');
+    else if (ball.x > W + 20) point('p');
+  }
+  function rr(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = '#21262d'; ctx.lineWidth = 1.5; ctx.setLineDash([6, 6]);
+    ctx.beginPath(); ctx.moveTo(W / 2, 4); ctx.lineTo(W / 2, H - 4); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = '#00E676'; rr(p.w, p.y, p.w, p.h, 6); ctx.fill();
+    ctx.fillStyle = '#7C4DFF'; rr(W - a.w * 2, a.y, a.w, a.h, 6); ctx.fill();
+    ctx.save();
+    ctx.shadowColor = '#00B0FF'; ctx.shadowBlur = 14;
+    ctx.fillStyle = '#00B0FF'; ctx.beginPath(); ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+    ctx.fillStyle = '#8b949e'; ctx.font = '11px ui-monospace, Menlo, Consolas, monospace'; ctx.textAlign = 'center';
+    ctx.fillText('YOU ' + ps + ' : ' + as + ' AI', W / 2, 15);
+    ctx.fillStyle = '#00E676'; ctx.fillText('MAX ' + maxScore, W / 2, 30);
+  }
+  function loop(t) {
+    var dt = Math.min((t - last) / 1000, 0.05); last = t;
+    step(dt); draw();
+    requestAnimationFrame(loop);
+  }
+  cv.addEventListener('mousemove', function (e) {
+    var r = cv.getBoundingClientRect();
+    mouseY = (e.clientY - r.top) * (H / r.height);
+  });
+  cv.addEventListener('mouseleave', function () { mouseY = null; });
+  cv.addEventListener('click', function () { if (state !== 'play') start(); });
+  window.addEventListener('keydown', function (e) {
+    keys[e.code] = true;
+    if (e.code === 'ArrowUp' || e.code === 'ArrowDown' || e.code === 'Space') e.preventDefault();
+    if ((e.code === 'Space' || e.code === 'Enter') && state !== 'play') start();
+  });
+  window.addEventListener('keyup', function (e) { keys[e.code] = false; });
+  startBtn.addEventListener('click', start);
+  capBtn.addEventListener('click', function () {
+    var tmp = document.createElement('canvas'); tmp.width = W; tmp.height = H + 44;
+    var t = tmp.getContext('2d');
+    t.fillStyle = '#0d1117'; t.fillRect(0, 0, tmp.width, tmp.height);
+    t.drawImage(cv, 0, 0);
+    t.fillStyle = '#e6edf3'; t.font = 'bold 15px ui-monospace, Menlo, Consolas, monospace'; t.textAlign = 'center';
+    t.fillText('PONG — YOU ' + ps + ' : ' + as + ' AI — MAX ' + maxScore, W / 2, H + 26);
+    var aEl = document.createElement('a');
+    aEl.href = tmp.toDataURL('image/png'); aEl.download = 'pong-score.png'; aEl.click();
+  });
+  renderMax(); hudUp();
+  requestAnimationFrame(function (t) { last = t; requestAnimationFrame(loop); });
+  window.__pong = { get state() { return state; }, ball: ball, get ps() { return ps; }, get as() { return as; }, get maxScore() { return maxScore; }, start: start, point: point, over: over, W: W, H: H };
+})();
+</script>

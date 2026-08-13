@@ -38,14 +38,15 @@
 
   <br/>
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=9CDCFE&center=true&vCenter=true&width=700&lines=3+full-stack+apps+serving+10K%2B+monthly+active+users;15%2B+REST+APIs+%7C+40%25+faster+response+time;Lighthouse+95%2B+scores+%7C+YOLOv8+92%25+accuracy;Open+to+Senior+Full-Stack+roles" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=9CDCFE&center=true&vCenter=true&width=700&lines=Full-stack+development+%7C+System+design+%7C+Performance;Lighthouse+95%2B+scores+%7C+YOLOv8+92%25+accuracy;Open+to+Senior+Full-Stack+roles" alt="Typing SVG" />
 
   <br/>
 
   [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Saxena-Ashu)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saxenaashu)
-  [![Gmail](https://img.shields.io/badge/ashusaxena4767%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ashusaxena4767@gmail.com)
-  [![Phone](https://img.shields.io/badge/%2B91%208439364075-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+918439364075)
+  [![Email](https://img.shields.io/badge/ashusaxena4767%40gmail.com-D14836?style=plastic&logo=gmail&logoColor=white)](mailto:ashusaxena4767@gmail.com)
+  [![Phone](https://img.shields.io/badge/%2B91%208439364075-%234285F4?style=for-the-badge)](tel:+918439364075)
+  [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/918439364075)
 
 </div>
 
@@ -96,7 +97,7 @@
 
 ## About
 
-Full-Stack Software Engineer who architects and ships products end-to-end — from system design and API architecture to performance optimization and team leadership. Built 3 full-stack applications serving 10K+ monthly active users, designed 15+ REST APIs (40% faster response times), and led a 5-engineer cross-functional team.
+Full-Stack Software Engineer who architects and ships products end-to-end — from system design and API architecture to performance optimization and team leadership.
 
 - **Location:** Bareilly, UP, India
 - **Email:** ashusaxena4767@gmail.com
@@ -284,10 +285,10 @@ Full-Stack Software Engineer who architects and ships products end-to-end — fr
 
 <br/>
 
-- **Architected and delivered** 3 full-stack web applications serving 10K+ monthly active users (React.js, Node.js, Flutter)
-- **Designed and implemented** 15+ RESTful APIs — cut average response time by 40% through query optimization and caching
+- **Architected and delivered** full-stack web applications at scale (React.js, Node.js, Flutter)
+- **Designed and implemented** RESTful APIs — reduced response times through query optimization and caching
 - **Owned frontend performance** — code splitting, lazy loading, and image optimization to hold 95+ Lighthouse scores
-- **Led a cross-functional team of 5 engineers** delivering mobile-first solutions, lifting user engagement by 30%
+- **Led a cross-functional team** delivering mobile-first solutions, lifting user engagement by 30%
 
 </details>
 
@@ -417,14 +418,14 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
   </defs>
   <circle cx="75" cy="70" r="56" fill="none" stroke="#21262d" stroke-width="10"/>
   <circle cx="75" cy="70" r="56" fill="none" stroke="url(#g2)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 75 70)">
-    <animate attributeName="stroke-dashoffset" from="352" to="211.2" dur="1.8s" fill="freeze" begin="0.5s"/>
+    <animate attributeName="stroke-dashoffset" from="352" to="140.8" dur="1.8s" fill="freeze" begin="0.5s"/>
   </circle>
   <circle cx="75" cy="70" r="56" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
     <animateTransform attributeName="transform" type="rotate" from="-90 75 70" to="270 75 70" dur="2.6s" repeatCount="indefinite"/>
   </circle>
-  <text x="75" y="66" font-size="19" font-family="monospace" font-weight="bold" fill="#00B0FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/>40%</text>
-  <text x="75" y="86" font-size="10" font-family="monospace" fill="#8b949e" text-anchor="middle">FASTER APIs</text>
-  <text x="75" y="152" font-size="10" font-family="monospace" fill="#8b949e" text-anchor="middle">Query optimization</text>
+  <text x="75" y="66" font-size="19" font-family="monospace" font-weight="bold" fill="#00B0FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/>60%</text>
+  <text x="75" y="86" font-size="10" font-family="monospace" fill="#8b949e" text-anchor="middle">FEWER FAILURES</text>
+  <text x="75" y="152" font-size="10" font-family="monospace" fill="#8b949e" text-anchor="middle">Real-time validation</text>
 </svg>
 </td>
 <td>
@@ -540,10 +541,10 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 
 ## Engineering Principles
 
-- **Scale-first design** — systems built for 10K+ users from day one
-- **Measure everything** — 40% faster APIs, 95+ Lighthouse, 99.9% uptime
+- **Scale-first design** — systems built for scale from day one
+- **Measure everything** — 95+ Lighthouse, 99.9% uptime, measurable wins
 - **Ship iteratively** — real-time validation cut registration failures by 60%
-- **Lead by building** — 5-engineer teams, mobile-first, engagement +30%
+- **Lead by building** — cross-functional teams, mobile-first delivery, engagement +30%
 
 <div align="center">
   <svg width="440" height="30" viewBox="0 0 440 30" xmlns="http://www.w3.org/2000/svg">
@@ -598,6 +599,40 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/output/github-contribution-grid-snake.svg" />
     <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/main/snake.svg" />
   </picture>
+</div>
+
+---
+
+## Ping Pong
+
+<!--
+  GitHub strips JavaScript, so this section renders an animated auto-rally on
+  the profile. The playable version (mouse/keys, score to 7, max-score capture)
+  is available in the Freebuff preview of this README.
+-->
+
+<div align="center">
+
+<svg width="640" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="620" height="280" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="30" y="40" font-size="14" font-family="monospace" font-weight="bold" fill="#00E676">PING PONG</text>
+  <rect x="30" y="54" width="580" height="206" rx="8" fill="#0d1117" stroke="#21262d"/>
+  <line x1="320" y1="54" x2="320" y2="260" stroke="#21262d" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="44" y="75" width="10" height="40" rx="5" fill="#00E676">
+    <animate attributeName="y" values="75;145;215;75" keyTimes="0;0.333;0.667;1" dur="6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/>
+  </rect>
+  <rect x="586" y="75" width="10" height="40" rx="5" fill="#7C4DFF">
+    <animate attributeName="y" values="75;75;145;215;75" keyTimes="0;0.167;0.5;0.833;1" dur="6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/>
+  </rect>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="47 95;593 95;47 165;593 165;47 235;593 235;47 95" keyTimes="0;0.167;0.333;0.5;0.667;0.833;1" dur="6s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="9" fill="#00B0FF" opacity="0.25"/>
+    <circle cx="0" cy="0" r="5.5" fill="#00B0FF"/>
+  </g>
+</svg>
+
+<sub><i>auto-rally — no input needed</i></sub>
+
 </div>
 
 ---
