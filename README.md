@@ -141,6 +141,7 @@ Full-Stack Software Engineer who architects and ships products end-to-end — fr
 ### Core Competencies
 
 <svg width="500" viewBox="0 0 470 156" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="466" height="152" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E676"/>
@@ -193,6 +194,7 @@ Full-Stack Software Engineer who architects and ships products end-to-end — fr
 
 <div align="center">
   <svg width="420" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="4" width="392" height="312" rx="16" fill="#161b22" stroke="#30363d"/>
     <circle cx="200" cy="160" r="140" fill="none" stroke="#00B0FF" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="6 6">
       <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="40s" repeatCount="indefinite"/>
       <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="0.4s" fill="freeze"/>
@@ -324,37 +326,51 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 
 <sub><i>platform scale — bars grow on load</i></sub>
 
-<svg width="520" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+<svg width="560" viewBox="0 0 540 196" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="mbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E676"/>
       <stop offset="100%" stop-color="#00B0FF"/>
     </linearGradient>
   </defs>
-  <text x="0" y="16" font-size="12" font-family="monospace" fill="#e6edf3">Concurrent users</text>
-  <rect x="170" y="6" width="250" height="10" rx="5" fill="#21262d"/>
-  <rect x="170" y="6" width="0" height="10" rx="5" fill="url(#mbGrad)">
+  <rect x="6" y="6" width="528" height="184" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="26" y="36" font-size="14" font-family="monospace" font-weight="bold" fill="#00E676">Platform Scale</text>
+  <text x="26" y="70" font-size="12" font-family="monospace" fill="#e6edf3">Concurrent users</text>
+  <rect x="210" y="60" width="250" height="10" rx="5" fill="#21262d"/>
+  <rect x="210" y="60" width="0" height="10" rx="5" fill="url(#mbGrad)">
     <animate attributeName="width" from="0" to="250" dur="1.2s" fill="freeze" begin="0.2s"/>
   </rect>
-  <text x="428" y="16" font-size="12" font-family="monospace" font-weight="bold" fill="#00E676">800+</text>
-  <text x="0" y="42" font-size="12" font-family="monospace" fill="#e6edf3">Individual registrations</text>
-  <rect x="170" y="32" width="250" height="10" rx="5" fill="#21262d"/>
-  <rect x="170" y="32" width="0" height="10" rx="5" fill="url(#mbGrad)">
+  <rect x="206" y="60" width="40" height="10" rx="5" fill="#ffffff" opacity="0.22">
+    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="468" y="70" font-size="12" font-family="monospace" font-weight="bold" fill="#00E676">800+</text>
+  <text x="26" y="100" font-size="12" font-family="monospace" fill="#e6edf3">Individual registrations</text>
+  <rect x="210" y="90" width="250" height="10" rx="5" fill="#21262d"/>
+  <rect x="210" y="90" width="0" height="10" rx="5" fill="url(#mbGrad)">
     <animate attributeName="width" from="0" to="156" dur="1.2s" fill="freeze" begin="0.5s"/>
   </rect>
-  <text x="428" y="42" font-size="12" font-family="monospace" font-weight="bold" fill="#00B0FF">500+</text>
-  <text x="0" y="68" font-size="12" font-family="monospace" fill="#e6edf3">Team registrations</text>
-  <rect x="170" y="58" width="250" height="10" rx="5" fill="#21262d"/>
-  <rect x="170" y="58" width="0" height="10" rx="5" fill="url(#mbGrad)">
+  <rect x="206" y="90" width="40" height="10" rx="5" fill="#ffffff" opacity="0.22">
+    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite" begin="0.3s"/>
+  </rect>
+  <text x="468" y="100" font-size="12" font-family="monospace" font-weight="bold" fill="#00B0FF">500+</text>
+  <text x="26" y="130" font-size="12" font-family="monospace" fill="#e6edf3">Team registrations</text>
+  <rect x="210" y="120" width="250" height="10" rx="5" fill="#21262d"/>
+  <rect x="210" y="120" width="0" height="10" rx="5" fill="url(#mbGrad)">
     <animate attributeName="width" from="0" to="94" dur="1.2s" fill="freeze" begin="0.8s"/>
   </rect>
-  <text x="428" y="68" font-size="12" font-family="monospace" font-weight="bold" fill="#7C4DFF">300+</text>
-  <text x="0" y="94" font-size="12" font-family="monospace" fill="#e6edf3">Data integrity (72h window)</text>
-  <rect x="170" y="84" width="250" height="10" rx="5" fill="#21262d"/>
-  <rect x="170" y="84" width="0" height="10" rx="5" fill="url(#mbGrad)">
+  <rect x="206" y="120" width="40" height="10" rx="5" fill="#ffffff" opacity="0.22">
+    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite" begin="0.6s"/>
+  </rect>
+  <text x="468" y="130" font-size="12" font-family="monospace" font-weight="bold" fill="#7C4DFF">300+</text>
+  <text x="26" y="160" font-size="12" font-family="monospace" fill="#e6edf3">Data integrity</text>
+  <rect x="210" y="150" width="250" height="10" rx="5" fill="#21262d"/>
+  <rect x="210" y="150" width="0" height="10" rx="5" fill="url(#mbGrad)">
     <animate attributeName="width" from="0" to="250" dur="1.2s" fill="freeze" begin="1.1s"/>
   </rect>
-  <text x="428" y="94" font-size="12" font-family="monospace" font-weight="bold" fill="#00E676">100%</text>
+  <rect x="206" y="150" width="40" height="10" rx="5" fill="#ffffff" opacity="0.22">
+    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite" begin="0.9s"/>
+  </rect>
+  <text x="468" y="160" font-size="12" font-family="monospace" font-weight="bold" fill="#00E676">100%</text>
 </svg>
 
 </div>
@@ -371,6 +387,7 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 <tr>
 <td>
 <svg width="150" height="165" viewBox="0 0 150 165" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="142" height="157" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00E676"/>
@@ -391,6 +408,7 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 </td>
 <td>
 <svg width="150" height="165" viewBox="0 0 150 165" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="142" height="157" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00B0FF"/>
@@ -411,6 +429,7 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 </td>
 <td>
 <svg width="150" height="165" viewBox="0 0 150 165" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="142" height="157" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7C4DFF"/>
@@ -433,6 +452,7 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 <tr>
 <td>
 <svg width="150" height="165" viewBox="0 0 150 165" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="142" height="157" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00E676"/>
@@ -453,6 +473,7 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 </td>
 <td>
 <svg width="150" height="165" viewBox="0 0 150 165" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="142" height="157" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00B0FF"/>
@@ -473,6 +494,7 @@ Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • 
 </td>
 <td>
 <svg width="150" height="165" viewBox="0 0 150 165" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="142" height="157" rx="12" fill="#161b22" stroke="#30363d"/>
   <defs>
     <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7C4DFF"/>
