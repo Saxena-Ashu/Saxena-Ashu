@@ -1,0 +1,33 @@
+<svg width="640" height="110" viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ASHU SAXENA">
+  <defs>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF">
+        <animate attributeName="stop-color" values="#00D4FF;#8B5CF6;#0077FF;#00D4FF" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#0077FF">
+        <animate attributeName="stop-color" values="#0077FF;#00D4FF;#8B5CF6;#0077FF" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#8B5CF6">
+        <animate attributeName="stop-color" values="#8B5CF6;#0077FF;#00D4FF;#8B5CF6" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <g font-family="monospace" font-size="56" font-weight="bold" fill="url(#titleGrad)">
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.00s"/><text x="20" y="78">A</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.10s"/><text x="56" y="78">S</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.20s"/><text x="92" y="78">H</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.30s"/><text x="128" y="78">U</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.50s"/><text x="182" y="78">S</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.60s"/><text x="218" y="78">A</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.70s"/><text x="254" y="78">X</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.80s"/><text x="290" y="78">E</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.90s"/><text x="326" y="78">N</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="1.00s"/><text x="362" y="78">A</text></g>
+  </g>
+
+  <text x="10" y="103" font-family="monospace" font-size="16" fill="#8BA3BF">// full-stack software engineer</text>
+  <rect x="420" y="90" width="7" height="13" fill="#00D4FF">
+    <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+  </rect>
+</svg>

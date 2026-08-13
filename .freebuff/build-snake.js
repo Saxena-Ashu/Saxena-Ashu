@@ -12,7 +12,7 @@ const PAD = 16;   // outer margin
 const PITCH = 13; // cell pitch (10px cell + 3px gap, GitHub dark grid)
 const CS = 10;    // cell size
 
-const LEVEL_COLORS = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
+const LEVEL_COLORS = ['#111827', '#12395e', '#0b5fa8', '#00a8e8', '#00D4FF'];
 
 function fetchContrib() {
   return new Promise((resolve, reject) => {
@@ -80,14 +80,14 @@ function buildSvg(grid, cols) {
   return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub contribution snake for ${USER}">
   <defs>
     <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00E676"/>
-      <stop offset="100%" stop-color="#00B0FF"/>
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
   </defs>
-  <rect width="${w}" height="${h}" fill="#0d1117"/>
+  <rect width="${w}" height="${h}" fill="#0A0F1C"/>
   ${cells}
   <path id="snakeTrack" d="${d}" fill="none" stroke="none" pathLength="1000"/>
-  <path d="${d}" fill="none" stroke="#7C4DFF" stroke-opacity="0.45" stroke-width="9" stroke-linecap="round" pathLength="1000" stroke-dasharray="95 905">
+  <path d="${d}" fill="none" stroke="#8B5CF6" stroke-opacity="0.45" stroke-width="9" stroke-linecap="round" pathLength="1000" stroke-dasharray="95 905">
     <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="7s" repeatCount="indefinite"/>
   </path>
   <path d="${d}" fill="none" stroke="url(#snakeGrad)" stroke-width="4.5" stroke-linecap="round" pathLength="1000" stroke-dasharray="80 920">

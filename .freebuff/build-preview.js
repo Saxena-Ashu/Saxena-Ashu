@@ -1,4 +1,4 @@
-// Renders README.md into a standalone preview.html (GitHub-dark theme) so the
+// Renders README.md into a standalone preview.html (cyberpunk theme) so the
 // profile can be watched live in the Freebuff Preview tab.
 // Run: node .freebuff/build-preview.js
 const fs = require('fs');
@@ -25,8 +25,8 @@ function renderCode(lang, buf) {
   let body = buf.join('\n');
   if (lang === 'diff') {
     body = body.split('\n').map((l) => {
-      if (l.startsWith('+')) return `<span style="color:#3fb950">${esc(l)}</span>`;
-      if (l.startsWith('-')) return `<span style="color:#f85149">${esc(l)}</span>`;
+      if (l.startsWith('+')) return `<span style="color:#00D4FF">${esc(l)}</span>`;
+      if (l.startsWith('-')) return `<span style="color:#8B5CF6">${esc(l)}</span>`;
       return esc(l);
     }).join('\n');
   } else {
@@ -67,7 +67,7 @@ while (i < lines.length) {
     continue;
   }
   if (t === '') { i++; continue; }
-  if (/^</.test(t)) { out.push(line); i++; continue; }        // raw HTML passthrough (div/svg/img/table/details/comments)
+  if (/^</.test(t)) { out.push(line); i++; continue; }        // raw HTML passthrough (div/img/table/details/comments)
   if (/^---+$/.test(t)) { out.push('<hr/>'); i++; continue; }
 
   const h = t.match(/^(#{1,6})\s+(.*)$/);
@@ -116,26 +116,26 @@ while (i < lines.length) {
 }
 
 const css = `
-  body { margin: 0; background: #0d1117; color: #e6edf3;
+  body { margin: 0; background: #0A0F1C; color: #E6F1FF;
          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
          -webkit-font-smoothing: antialiased; }
   main { max-width: 960px; margin: 0 auto; padding: 24px 16px 72px; }
   h2 { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-       color: #00E676; border-bottom: 1px solid #21262d; padding-bottom: .3em; margin-top: 2em; }
-  h3 { color: #00B0FF; }
-  pre { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 14px 16px; overflow-x: auto; }
+       color: #00D4FF; border-bottom: 1px solid #1E3A5F; padding-bottom: .3em; margin-top: 2em; }
+  h3 { color: #22D3EE; }
+  pre { background: #111827; border: 1px solid #1E3A5F; border-radius: 6px; padding: 14px 16px; overflow-x: auto; }
   code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-         font-size: 13px; background: rgba(110,118,129,.2); border-radius: 4px; padding: 1px 4px; }
+         font-size: 13px; background: rgba(139,163,191,.15); border-radius: 4px; padding: 1px 4px; }
   pre code { background: none; padding: 0; }
   table { border-collapse: collapse; width: 100%; margin: 10px 0; }
-  th, td { border: 1px solid #30363d; padding: 8px 12px; text-align: left; }
-  th { background: #161b22; color: #00E676; }
-  a { color: #58a6ff; }
+  th, td { border: 1px solid #1E3A5F; padding: 8px 12px; text-align: left; }
+  th { background: #111827; color: #00D4FF; }
+  a { color: #00D4FF; }
   img { max-width: 100%; }
-  details { border: 1px solid #30363d; border-radius: 6px; padding: 8px 12px; background: #161b22; margin: 10px 0; }
+  details { border: 1px solid #1E3A5F; border-radius: 6px; padding: 8px 12px; background: #111827; margin: 10px 0; }
   summary { cursor: pointer; }
-  blockquote { border-left: 4px solid #30363d; padding-left: 12px; color: #8b949e; margin: 10px 0; }
-  hr { border: 0; border-top: 1px solid #21262d; margin: 24px 0; }
+  blockquote { border-left: 4px solid #1E3A5F; padding-left: 12px; color: #8BA3BF; margin: 10px 0; }
+  hr { border: 0; border-top: 1px solid #1E3A5F; margin: 24px 0; }
   p { line-height: 1.5; }
   ul { padding-left: 1.6em; }
   li { margin: 4px 0; line-height: 1.5; }
@@ -157,6 +157,13 @@ ${out.join('\n')}
 </html>
 `;
 
+// Preview-only: swap the README's auto-rally ping pong asset for the
+// interactive game from pong-game.html (playable with mouse/keys, scores to 7,
+// captures the max score in localStorage).
+try {
+  const pong = fs.readFileSync(path.join(__dirname, 'pong-game.html'), 'utf8');
+  html = html.replace(/<img src="\.\/assets\/ping-pong\.svg"[^>]*>/, pong);
+} catch {}
 // Preview-only: swap the snake <picture> for the locally generated animated
 // SVG so the snake is visible even before the user uploads snake.svg to
 // GitHub. Run .freebuff/build-snake.js first to (re)generate it.
@@ -164,18 +171,21 @@ try {
   const snakeSvg = fs.readFileSync(path.join(__dirname, 'snake.svg'), 'utf8');
   html = html.replace(/<picture>[\s\S]*?<\/picture>/, snakeSvg);
 } catch {}
-// Preview-only: replace the README's auto-rally ping pong SVG (GitHub can't
-// run JavaScript) with the interactive game from pong-game.html, which is
-// playable with mouse/keys, scores to 7, and captures the max score.
-try {
-  const pong = fs.readFileSync(path.join(__dirname, 'pong-game.html'), 'utf8');
-  html = html.replace(
-    /<svg width="640"[\s\S]*?<\/svg>\s*<sub><i>auto-rally[^<]*<\/i><\/sub>/,
-    pong
-  );
-} catch {}
-// Fallback: if the picture block was already replaced, still rewrite any
-// remaining raw snake URL to the local copy for robustness.
+// Inline every remaining ./assets/*.svg reference so the static preview page
+// renders them (the preview server only serves the single HTML file). The
+// SVG's own width attribute is kept; if the img tag carried a width, use it.
+html = html.replace(/<img src="\.\/assets\/([\w-]+\.svg)"([^>]*)>/g, (m, name, attrs) => {
+  try {
+    let svg = fs.readFileSync(path.join(root, 'assets', name), 'utf8');
+    const w = (attrs.match(/width="([^"]+)"/) || [])[1];
+    if (w) svg = svg.replace(/<svg([^>]*)>/, (mm, rest) => {
+      rest = rest.replace(/\s+width="[^"]*"/, '');
+      return `<svg${rest} width="${w}">`;
+    });
+    return svg;
+  } catch { return m; }
+});
+// Fallback: rewrite any remaining raw snake URL to the local copy.
 html = html.replaceAll(
   'https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/main/snake.svg',
   'snake.svg'
