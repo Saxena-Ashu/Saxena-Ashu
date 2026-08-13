@@ -1,6 +1,6 @@
 <svg width="640" height="110" viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ASHU SAXENA">
   <defs>
-    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="tgl" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0369A1">
         <animate attributeName="stop-color" values="#0369A1;#7C3AED;#2563EB;#0369A1" dur="8s" repeatCount="indefinite"/>
       </stop>
@@ -12,7 +12,7 @@
       </stop>
     </linearGradient>
   </defs>
-  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tg)">
+  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tgl)">
     <text x="20" y="74">A</text>
     <text x="56" y="74">S</text>
     <text x="92" y="74">H</text>

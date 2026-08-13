@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4FF,25:22D3EE,50:0077FF,75:8B5CF6,100:00D4FF&height=170&section=header" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0369A1,25:0891B2,50:2563EB,75:7C3AED,100:0369A1&height=170&section=header" width="100%" />
 </div>
 
 <!-- ================= HERO ================= -->
@@ -14,7 +14,11 @@
 
 <div align="center">
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1400&color=8B949E&center=true&vCenter=true&width=640&lines=Building+scalable+web+%26+mobile+products+with+React%2C+Node.js%2C+Flutter+and+TypeScript" alt="Professional statement" />
+  Full-Stack Development · Backend Engineering · System Design
+
+  <br/>
+
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1400&color=475569&center=true&vCenter=true&width=640&lines=Building+scalable+web+%26+mobile+products+with+React%2C+Node.js%2C+Flutter+and+TypeScript" alt="Professional statement" />
 
   <br/>
 
@@ -102,7 +106,7 @@ Software Development Engineer building full-stack applications end-to-end — RE
 ![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=github&logoColor=white)
 
-### Productivity / Business Tools
+### Tools
 ![Power BI](https://img.shields.io/badge/Power%20BI-%23F2C811.svg?style=flat-square&logo=powerbi&logoColor=black)
 ![Power Apps](https://img.shields.io/badge/Power%20Apps-%2374276F.svg?style=flat-square&logo=powerapps&logoColor=white)
 ![Power Automate](https://img.shields.io/badge/Power%20Automate-%230066FF.svg?style=flat-square&logo=powerautomate&logoColor=white)
@@ -190,11 +194,9 @@ Software Development Engineer building full-stack applications end-to-end — RE
 
 </div>
 
-**Problem** — A technical fest needed an end-to-end registration platform that could handle peak traffic without failing: hundreds of concurrent users, individual and team signups, and zero tolerance for data loss across a 72-hour registration window.
+**Overview** — An end-to-end registration platform for a technical fest, engineered to sustain peak traffic without downtime and with zero tolerance for data loss across a 72-hour registration window.
 
-**Solution** — Architected a full-stack platform with Node.js and Express.js backed by MongoDB, fronted with HTML5/CSS3/JavaScript, containerized with Docker, and hardened with real-time validation and error handling plus a computerized monitoring and alert system.
-
-**Architecture** — Traffic → API → Validation → Database → Monitoring:
+**Architecture** — Users → Registration Interface → Node.js / Express API → Validation → MongoDB → Monitoring:
 
 <div align="center">
   <picture>
@@ -261,7 +263,7 @@ Software Development Engineer building full-stack applications end-to-end — RE
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0D1117&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=300" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-light&bg_color=F8FAFC&color=0369A1&line=2563EB&point=7C3AED&area=true&hide_border=true&radius=16&height=300" />
-  <img alt="Contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0D1117&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=300" width="95%" />
+  <img alt="Contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-light&bg_color=F8FAFC&color=0369A1&line=2563EB&point=7C3AED&area=true&hide_border=true&radius=16&height=300" width="95%" />
 </picture>
 
 <br/>
@@ -290,47 +292,33 @@ Software Development Engineer building full-stack applications end-to-end — RE
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/ping-pong-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/ping-pong-light.svg" />
-    <img src="./assets/ping-pong-light.svg" alt="Ping pong preview" width="640" />
+    <img src="./assets/ping-pong-light.svg" alt="Ping pong auto rally" width="640" />
   </picture>
 
   <br/>
-
-  <a href="https://saxena-ashu.github.io/Saxena-Ashu/ping-pong/">
-    <img src="https://img.shields.io/badge/Play%20Ping%20Pong-00D4FF?style=for-the-badge&labelColor=0D1117&logoColor=white" alt="Play Ping Pong" />
-  </a>
-
-  <br/>
-  <sub><i>manual game — W/S or ↑/↓ · first to 7 · player vs computer</i></sub>
+  <sub><i>auto rally — a small developer easter egg</i></sub>
 
 </div>
-
-<!-- The game is a real page in this repo: ping-pong/ (index.html, style.css,
-     game.js). To make the PLAY button work, enable GitHub Pages on
-     Saxena-Ashu/Saxena-Ashu → Settings → Pages → Deploy from branch → main / (root). -->
 
 ---
-
-<!-- ================= CONTACT ================= -->
-
-## Contact
-
-<div align="center">
-
-```
-┌─────────────────────────────────────────────┐
-│  Mail  : ashusaxena4767@gmail.com           │
-│  Phone : +91 8439364075                     │
-│  City  : Bareilly, UP, India                │
-│  Open  : Software Engineering roles         │
-└─────────────────────────────────────────────┘
-```
-
-![Profile Views](https://komarev.com/ghpvc/?username=Saxena-Ashu&color=00D4FF&style=flat-square&label=Profile+Views)
-
-</div>
 
 <!-- ================= FOOTER ================= -->
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4FF,25:22D3EE,50:0077FF,75:8B5CF6,100:00D4FF&height=120&section=footer" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg" />
+    <img src="./assets/footer-light.svg" alt="Contact" width="560" />
+  </picture>
+
+  <br/>
+
+  ![Profile Views](https://komarev.com/ghpvc/?username=Saxena-Ashu&color=0369A1&style=flat-square&label=Profile+Views)
+
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0369A1,25:0891B2,50:2563EB,75:7C3AED,100:0369A1&height=120&section=footer" width="100%" />
 </div>

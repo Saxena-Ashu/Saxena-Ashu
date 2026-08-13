@@ -1,37 +1,81 @@
-<svg width="560" height="170" viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TECHVOYM architecture and scale">
+<svg width="560" height="582" viewBox="0 0 560 582" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TECHVOYM architecture and scale">
+  <rect x="6" y="6" width="548" height="560" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="28" y="40" font-size="14" font-family="monospace" font-weight="bold" fill="#0369A1">TECHVOYM · ARCHITECTURE & SCALE</text>
   <g>
-    <rect x="18" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
-    <text x="64" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">TRAFFIC</text>
-    <text x="64" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">800+ concurrent</text>
+    <rect x="28" y="70" width="210" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <rect x="40" y="86" width="3" height="26" rx="1.5" fill="#0369A1"/>
+    <text x="54" y="95" font-size="11" font-family="monospace" font-weight="bold" fill="#0F172A">USERS</text>
+    <text x="54" y="111" font-size="9" font-family="monospace" fill="#475569">800+ concurrent users</text>
   </g>
-  <path d="M113 86 L123 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
-  <path d="M119 81 L123 86 L119 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <g>
-    <rect x="126" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
-    <text x="172" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle">API</text>
-    <text x="172" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">REST · Node.js</text>
+    <rect x="266" y="70" width="266" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="280" y="100" font-size="16" font-family="monospace" font-weight="bold" fill="#0369A1">800+</text>
+    <text x="280" y="116" font-size="10" font-family="monospace" fill="#475569">Concurrent users</text>
   </g>
-  <path d="M221 86 L231 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
-  <path d="M227 81 L231 86 L227 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M133 135 L133 143" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M129 139 L137 139" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
   <g>
-    <rect x="234" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
-    <text x="280" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0891B2" text-anchor="middle">VALIDATION</text>
-    <text x="280" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">60% fewer failures</text>
+    <rect x="28" y="150" width="210" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <rect x="40" y="166" width="3" height="26" rx="1.5" fill="#2563EB"/>
+    <text x="54" y="175" font-size="11" font-family="monospace" font-weight="bold" fill="#0F172A">REGISTRATION INTERFACE</text>
+    <text x="54" y="191" font-size="9" font-family="monospace" fill="#475569">HTML5 · CSS3 · JS</text>
   </g>
-  <path d="M329 86 L339 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
-  <path d="M335 81 L339 86 L335 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <g>
-    <rect x="342" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
-    <text x="388" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle">DATABASE</text>
-    <text x="388" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">500+ · 300+ regs</text>
+    <rect x="266" y="150" width="266" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="280" y="180" font-size="16" font-family="monospace" font-weight="bold" fill="#2563EB">500+</text>
+    <text x="280" y="196" font-size="10" font-family="monospace" fill="#475569">Individual registrations</text>
   </g>
-  <path d="M437 86 L447 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
-  <path d="M443 81 L447 86 L443 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M133 215 L133 223" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M129 219 L137 219" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
   <g>
-    <rect x="450" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
-    <text x="496" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">MONITORING</text>
-    <text x="496" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">100% integrity</text>
+    <rect x="28" y="230" width="210" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <rect x="40" y="246" width="3" height="26" rx="1.5" fill="#7C3AED"/>
+    <text x="54" y="255" font-size="11" font-family="monospace" font-weight="bold" fill="#0F172A">API</text>
+    <text x="54" y="271" font-size="9" font-family="monospace" fill="#475569">Node.js · Express.js</text>
   </g>
-  <text x="280" y="140" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>
-  <text x="280" y="156" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">99.9% uptime · 72-hour registration window</text>
+  <g>
+    <rect x="266" y="230" width="266" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="280" y="260" font-size="16" font-family="monospace" font-weight="bold" fill="#7C3AED">300+</text>
+    <text x="280" y="276" font-size="10" font-family="monospace" fill="#475569">Team registrations</text>
+  </g>
+  <path d="M133 295 L133 303" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M129 299 L137 299" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <g>
+    <rect x="28" y="310" width="210" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <rect x="40" y="326" width="3" height="26" rx="1.5" fill="#0891B2"/>
+    <text x="54" y="335" font-size="11" font-family="monospace" font-weight="bold" fill="#0F172A">VALIDATION</text>
+    <text x="54" y="351" font-size="9" font-family="monospace" fill="#475569">real-time checks</text>
+  </g>
+  <g>
+    <rect x="266" y="310" width="266" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="280" y="340" font-size="16" font-family="monospace" font-weight="bold" fill="#0891B2">60%</text>
+    <text x="280" y="356" font-size="10" font-family="monospace" fill="#475569">Fewer failures</text>
+  </g>
+  <path d="M133 375 L133 383" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M129 379 L137 379" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <g>
+    <rect x="28" y="390" width="210" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <rect x="40" y="406" width="3" height="26" rx="1.5" fill="#2563EB"/>
+    <text x="54" y="415" font-size="11" font-family="monospace" font-weight="bold" fill="#0F172A">DATABASE</text>
+    <text x="54" y="431" font-size="9" font-family="monospace" fill="#475569">MongoDB</text>
+  </g>
+  <g>
+    <rect x="266" y="390" width="266" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="280" y="420" font-size="16" font-family="monospace" font-weight="bold" fill="#2563EB">99.9%</text>
+    <text x="280" y="436" font-size="10" font-family="monospace" fill="#475569">Uptime</text>
+  </g>
+  <path d="M133 455 L133 463" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M129 459 L137 459" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <g>
+    <rect x="28" y="470" width="210" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <rect x="40" y="486" width="3" height="26" rx="1.5" fill="#0369A1"/>
+    <text x="54" y="495" font-size="11" font-family="monospace" font-weight="bold" fill="#0F172A">MONITORING</text>
+    <text x="54" y="511" font-size="9" font-family="monospace" fill="#475569">alerts · integrity</text>
+  </g>
+  <g>
+    <rect x="266" y="470" width="266" height="58" rx="9" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="280" y="500" font-size="16" font-family="monospace" font-weight="bold" fill="#0369A1">100%</text>
+    <text x="280" y="516" font-size="10" font-family="monospace" fill="#475569">Data integrity</text>
+  </g>
+  <text x="280" y="562" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>
 </svg>

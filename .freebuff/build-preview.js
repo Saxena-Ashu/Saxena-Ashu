@@ -167,18 +167,15 @@ ${out.join('\n')}
 </html>
 `;
 
-// Preview-only swaps + asset inlining, processed picture-block by picture-block
+// Preview-only swap + asset inlining, processed picture-block by picture-block
 // so no regex can swallow content across blocks.
-let pong = null, snakeSvg = null;
-try { pong = fs.readFileSync(path.join(__dirname, 'pong-game.html'), 'utf8'); } catch {}
+let snakeSvg = null;
 try { snakeSvg = fs.readFileSync(path.join(__dirname, 'snake.svg'), 'utf8'); } catch {}
 
 html = html.replace(/<picture>([\s\S]*?)<\/picture>/g, (m, inner) => {
   // 1) Preview-only: the snake picture becomes the local animated snake.
   if (snakeSvg && /github-contribution-grid-snake/.test(inner)) return snakeSvg;
-  // 2) Preview-only: the ping-pong picture becomes the interactive game.
-  if (pong && /ping-pong-(?:dark|light)\.svg/.test(inner)) return pong;
-  // 3) Local asset pair -> two inlined SVGs toggled by prefers-color-scheme.
+  // 2) Local asset pair -> two inlined SVGs toggled by prefers-color-scheme.
   const darkMatch = inner.match(/srcset="\.\/assets\/([\w-]+-dark\.svg)"/);
   const lightMatch = inner.match(/srcset="\.\/assets\/([\w-]+-light\.svg)"/);
   if (darkMatch || lightMatch) {
@@ -193,7 +190,7 @@ html = html.replace(/<picture>([\s\S]*?)<\/picture>/g, (m, inner) => {
     }
     return parts;
   }
-  // 4) External picture (typing svg, activity graph) — keep as-is.
+  // 3) External picture (typing svg, activity graph) — keep as-is.
   return m;
 });
 // Fallback: rewrite any remaining raw snake URL to the local copy.

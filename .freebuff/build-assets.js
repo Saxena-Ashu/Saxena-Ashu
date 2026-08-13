@@ -1,10 +1,10 @@
-// Generates all custom SVG assets for the profile README — 8 components x 2
-// themes (dark/light), driven by shared palettes so the two themes stay
-// perfectly consistent. Run: node .freebuff/build-assets.js
+// Generates all custom SVG assets for the profile README — 9 components x 2
+// themes (dark/light), driven by shared palettes. Light is the default/fallback.
+// Run: node .freebuff/build-assets.js
 //
 // All assets are standalone .svg files referenced from README.md via
 // <picture><source media="(prefers-color-scheme: ...)">. SMIL animation is
-// minimal and never required for the design to read correctly.
+// minimal and only where it adds professional value.
 const fs = require('fs');
 const path = require('path');
 
@@ -12,13 +12,15 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'assets');
 
 const DARK = {
-  bg: '#0D1117', card: '#161B22', border: '#30363D',
+  key: 'd',
+  bg: '#0D1117', card: '#161B22', card2: '#111827', border: '#30363D',
   text: '#F0F6FC', muted: '#8B949E', track: '#21262D',
   primary: '#00D4FF', secondary: '#0077FF', accent: '#8B5CF6', highlight: '#22D3EE',
-  tileStroke: '#0D1117', court: '#161B22', sweep: '#E6EDF3',
+  tileStroke: '#0D1117', court: '#111827', sweep: '#E6EDF3',
 };
 const LIGHT = {
-  bg: '#F8FAFC', card: '#FFFFFF', border: '#CBD5E1',
+  key: 'l',
+  bg: '#F8FAFC', card: '#FFFFFF', card2: '#F1F5F9', border: '#CBD5E1',
   text: '#0F172A', muted: '#475569', track: '#E2E8F0',
   primary: '#0369A1', secondary: '#2563EB', accent: '#7C3AED', highlight: '#0891B2',
   tileStroke: '#CBD5E1', court: '#F1F5F9', sweep: '#0F172A',
@@ -42,7 +44,7 @@ function wrap(body, w, h, vb, label) {
 
 // ---------------------------------------------------------------- title
 function title(p) {
-  const grad = `<linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+  const grad = `<linearGradient id="tg${p.key}" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="${p.primary}">
         <animate attributeName="stop-color" values="${p.primary};${p.accent};${p.secondary};${p.primary}" dur="8s" repeatCount="indefinite"/>
       </stop>
@@ -56,7 +58,7 @@ function title(p) {
   return wrap(`  <defs>
     ${grad}
   </defs>
-  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tg)">
+  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tg${p.key})">
     <text x="20" y="74">A</text>
     <text x="56" y="74">S</text>
     <text x="92" y="74">H</text>
@@ -86,13 +88,13 @@ function openToWork(p) {
 // ----------------------------------------------------------------- divider
 function divider(p) {
   return wrap(`  <defs>
-    <linearGradient id="dg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="dg${p.key}" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="${p.primary}"/>
       <stop offset="50%" stop-color="${p.secondary}"/>
       <stop offset="100%" stop-color="${p.accent}"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="4" fill="url(#dg)"/>
+  <rect width="100" height="4" fill="url(#dg${p.key})"/>
   <rect width="18" height="4" fill="${p.sweep}" opacity="0.5">
     <animate attributeName="x" values="-18;100" dur="3.5s" repeatCount="indefinite"/>
   </rect>`, '100%', 4, '0 0 100 4', 'divider');
@@ -174,36 +176,63 @@ ${inner.map(([x, y, k, b]) => tile(x, y, k, b)).join('\n')}
 }
 
 // --------------------------------------------------------------- techvoym
+// Vertical architecture dashboard: Users -> Interface -> API -> Validation
+// -> MongoDB -> Monitoring, with the resume's metrics beside each stage.
 function techvoym(p) {
   const stages = [
-    ['TRAFFIC', '800+ concurrent', p.primary],
-    ['API', 'REST · Node.js', p.secondary],
-    ['VALIDATION', '60% fewer failures', p.highlight],
-    ['DATABASE', '500+ · 300+ regs', p.accent],
-    ['MONITORING', '100% integrity', p.primary],
+    ['USERS', '800+ concurrent users', p.primary],
+    ['REGISTRATION INTERFACE', 'HTML5 · CSS3 · JS', p.secondary],
+    ['API', 'Node.js · Express.js', p.accent],
+    ['VALIDATION', 'real-time checks', p.highlight],
+    ['DATABASE', 'MongoDB', p.secondary],
+    ['MONITORING', 'alerts · integrity', p.primary],
   ];
-  const nodeW = 92;
-  const gap = 16;
-  const x0 = 18;
-  let body = '';
+  const nodeX = 28;
+  const nodeW = 210;
+  const nodeH = 58;
+  const rowGap = 22;
+  const startY = 70;
+  const metricX = 266;
+  const metricW = 266;
+  const metrics = [
+    ['800+', 'Concurrent users'],
+    ['500+', 'Individual registrations'],
+    ['300+', 'Team registrations'],
+    ['60%', 'Fewer failures'],
+    ['99.9%', 'Uptime'],
+    ['100%', 'Data integrity'],
+  ];
+  const cardH = startY + 6 * (nodeH + rowGap) + 16 - 6; // card top is y=6
+  let body = `  <rect x="6" y="6" width="548" height="${cardH}" rx="14" fill="${p.card}" stroke="${p.border}"/>
+  <text x="28" y="40" font-size="14" font-family="monospace" font-weight="bold" fill="${p.primary}">TECHVOYM · ARCHITECTURE & SCALE</text>
+`;
   stages.forEach(([label, sub, color], i) => {
-    const x = x0 + i * (nodeW + gap);
+    const y = startY + i * (nodeH + rowGap);
     body += `  <g>
-    <rect x="${x}" y="58" width="${nodeW}" height="56" rx="9" fill="${p.card}" stroke="${p.border}"/>
-    <text x="${x + nodeW / 2}" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="${color}" text-anchor="middle">${label}</text>
-    <text x="${x + nodeW / 2}" y="96" font-size="9" font-family="monospace" fill="${p.muted}" text-anchor="middle">${sub}</text>
+    <rect x="${nodeX}" y="${y}" width="${nodeW}" height="${nodeH}" rx="9" fill="${p.card2}" stroke="${p.border}"/>
+    <rect x="${nodeX + 12}" y="${y + 16}" width="3" height="26" rx="1.5" fill="${color}"/>
+    <text x="${nodeX + 26}" y="${y + 25}" font-size="11" font-family="monospace" font-weight="bold" fill="${p.text}">${label}</text>
+    <text x="${nodeX + 26}" y="${y + 41}" font-size="9" font-family="monospace" fill="${p.muted}">${sub}</text>
+  </g>
+`;
+    // right-hand metric card
+    const [val, mlabel] = metrics[i];
+    body += `  <g>
+    <rect x="${metricX}" y="${y}" width="${metricW}" height="${nodeH}" rx="9" fill="${p.card2}" stroke="${p.border}"/>
+    <text x="${metricX + 14}" y="${y + 30}" font-size="16" font-family="monospace" font-weight="bold" fill="${color}">${val}</text>
+    <text x="${metricX + 14}" y="${y + 46}" font-size="10" font-family="monospace" fill="${p.muted}">${mlabel}</text>
   </g>
 `;
     if (i < stages.length - 1) {
-      const ax = x + nodeW + gap / 2;
-      body += `  <path d="M${ax - 5} 86 L${ax + 5} 86" stroke="${p.border}" stroke-width="2" stroke-linecap="round"/>
-  <path d="M${ax + 1} 81 L${ax + 5} 86 L${ax + 1} 91" fill="none" stroke="${p.border}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      const ay = y + nodeH + rowGap / 2;
+      body += `  <path d="M${nodeX + nodeW / 2} ${ay - 4} L${nodeX + nodeW / 2} ${ay + 4}" stroke="${p.border}" stroke-width="2" stroke-linecap="round"/>
+  <path d="M${nodeX + nodeW / 2 - 4} ${ay} L${nodeX + nodeW / 2 + 4} ${ay}" fill="none" stroke="${p.border}" stroke-width="2" stroke-linecap="round"/>
 `;
     }
   });
-  body += `  <text x="280" y="140" font-size="10" font-family="monospace" fill="${p.muted}" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>
-  <text x="280" y="156" font-size="10" font-family="monospace" fill="${p.muted}" text-anchor="middle">99.9% uptime · 72-hour registration window</text>`;
-  return wrap(body, 560, 170, '0 0 560 170', 'TECHVOYM architecture and scale');
+  body += `  <text x="280" y="${startY + 6 * (nodeH + rowGap) + 12}" font-size="10" font-family="monospace" fill="${p.muted}" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>`;
+  const H = cardH + 6 + 16;
+  return wrap(body, 560, H, `0 0 560 ${H}`, 'TECHVOYM architecture and scale');
 }
 
 // ----------------------------------------------------------------- metrics
@@ -250,20 +279,41 @@ function metrics(p) {
 }
 
 // --------------------------------------------------------------- ping pong
+// Subtle automatic rally: ball glides between two paddles. Professional, not
+// arcade. SMIL runs when the SVG is loaded as an image (same as the snake).
 function pingPong(p) {
   return wrap(`  <rect x="10" y="10" width="620" height="280" rx="14" fill="${p.card}" stroke="${p.border}"/>
   <text x="30" y="44" font-size="14" font-family="monospace" font-weight="bold" fill="${p.primary}">PING PONG</text>
-  <text x="610" y="44" font-size="10" font-family="monospace" fill="${p.muted}" text-anchor="end">manual game</text>
+  <text x="610" y="44" font-size="10" font-family="monospace" fill="${p.muted}" text-anchor="end">auto rally</text>
   <rect x="30" y="60" width="580" height="200" rx="8" fill="${p.court}" stroke="${p.border}"/>
   <line x1="320" y1="60" x2="320" y2="260" stroke="${p.border}" stroke-width="1.5" stroke-dasharray="5 5"/>
-  <text x="44" y="84" font-size="11" font-family="monospace" fill="${p.muted}">Player</text>
+  <text x="44" y="84" font-size="11" font-family="monospace" fill="${p.muted}">Player 1</text>
   <text x="596" y="84" font-size="11" font-family="monospace" fill="${p.muted}" text-anchor="end">CPU</text>
-  <text x="320" y="96" font-size="14" font-family="monospace" font-weight="bold" fill="${p.text}" text-anchor="middle">0 — 0</text>
-  <text x="320" y="196" font-size="13" font-family="monospace" font-weight="bold" fill="${p.primary}" text-anchor="middle">PLAY GAME →</text>
-  <rect x="50" y="120" width="10" height="60" rx="5" fill="${p.primary}"/>
-  <rect x="580" y="120" width="10" height="60" rx="5" fill="${p.accent}"/>
-  <circle cx="320" cy="150" r="6" fill="${p.highlight}"/>
-  <text x="320" y="282" font-size="11" font-family="monospace" fill="${p.muted}" text-anchor="middle">W/S or ↑/↓ — first to 7 · player vs computer</text>`, 640, 300, '0 0 640 300', 'Ping pong — playable preview');
+  <text x="320" y="96" font-size="13" font-family="monospace" font-weight="bold" fill="${p.text}" text-anchor="middle">0 — 0</text>
+  <rect x="50" y="120" width="10" height="56" rx="5" fill="${p.primary}">
+    <animate attributeName="y" values="120;170;120" dur="4.5s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/>
+  </rect>
+  <rect x="580" y="120" width="10" height="56" rx="5" fill="${p.accent}">
+    <animate attributeName="y" values="170;120;170" dur="4.5s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/>
+  </rect>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="56 148;564 148;56 148" dur="4.5s" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="9" fill="${p.highlight}" opacity="0.22"/>
+    <circle cx="0" cy="0" r="5.5" fill="${p.highlight}"/>
+  </g>`, 640, 300, '0 0 640 300', 'Ping pong — auto rally');
+}
+
+// ------------------------------------------------------------------- footer
+function footer(p) {
+  return wrap(`  <rect x="10" y="10" width="540" height="190" rx="14" fill="${p.card}" stroke="${p.border}"/>
+  <text x="280" y="44" font-size="17" font-family="monospace" font-weight="bold" fill="${p.primary}" text-anchor="middle">ASHU SAXENA</text>
+  <text x="280" y="64" font-size="11" font-family="monospace" fill="${p.muted}" text-anchor="middle">Software Development Engineer</text>
+  <line x1="200" y1="80" x2="360" y2="80" stroke="${p.border}" stroke-width="1"/>
+  <text x="280" y="102" font-size="11" font-family="monospace" fill="${p.muted}" text-anchor="middle">Bareilly, UP, India</text>
+  <text x="280" y="126" font-size="11" font-family="monospace" fill="${p.text}" text-anchor="middle">ashusaxena4767@gmail.com</text>
+  <text x="280" y="146" font-size="11" font-family="monospace" fill="${p.text}" text-anchor="middle">github.com/Saxena-Ashu</text>
+  <text x="280" y="166" font-size="11" font-family="monospace" fill="${p.text}" text-anchor="middle">linkedin.com/in/saxenaashu</text>
+  <text x="280" y="188" font-size="11" font-family="monospace" font-weight="bold" fill="${p.accent}" text-anchor="middle">Build. Optimize. Scale.</text>`, 560, 210, '0 0 560 210', 'Contact footer');
 }
 
 const GENERATORS = {
@@ -275,6 +325,7 @@ const GENERATORS = {
   'techvoym': techvoym,
   'metrics': metrics,
   'ping-pong': pingPong,
+  'footer': footer,
 };
 
 fs.mkdirSync(OUT, { recursive: true });

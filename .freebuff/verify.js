@@ -15,11 +15,17 @@ console.log('missing assets:', missing.length ? missing.join(',') : 'none');
 console.log('picture blocks:', (text.match(/<picture>/g) || []).length);
 console.log('theme switches (prefers-color-scheme):', (text.match(/prefers-color-scheme/g) || []).length);
 
+// Light must be the fallback img in every picture block.
+const pics = [...text.matchAll(/<picture>([\s\S]*?)<\/picture>/g)].map((m) => m[1]);
+const lightFallback = pics.filter((p) => /<img[^>]*src="\.\/assets\/[\w-]+-light\.svg"/.test(p) || /<img[^>]*src="https:/.test(p));
+console.log('picture blocks with light/default fallback:', lightFallback.length, '/', pics.length);
+
 ['## About', '## Engineering Impact', '## Tech Stack', '## Engineering Capabilities', '## Technologies', '## Experience',
  '## Projects', '## Education', '## Achievements',
- '## GitHub Activity', '## Ping Pong', '## Contact'].forEach((h) => {
+ '## GitHub Activity', '## Ping Pong'].forEach((h) => {
   console.log(h + ':', text.includes(h));
 });
+console.log('footer asset referenced:', text.includes('./assets/footer-light.svg'));
 
 // Resume-backed facts that must be present (source of truth).
 ['10K+', '15+', '40%', '95+', '30%', '800+', '99.9%', '500+', '300+', '60%', '100%', '7.29',
@@ -33,9 +39,13 @@ console.log('theme switches (prefers-color-scheme):', (text.match(/prefers-color
  'NLP'].forEach((b) => {
   console.log('ai/ml [' + b + ']:', (text.match(new RegExp(b, 'gi')) || []).length);
 });
-console.log('ai/ml metric [92% ACCURACY]:', (text.match(/92%\s*ACCURACY|ACCURACY/gi) || []).length);
+console.log('ai/ml metric [92% ACCURACY]:', (text.match(/92%|ACCURACY/gi) || []).length);
 
 // No banned constructs for GitHub compatibility.
-['<script', '<iframe', '<canvas', 'animateTransform', 'onclick', 'javascript:'].forEach((b) => {
+['<script', '<iframe', '<canvas', 'animateTransform', 'onclick', 'javascript:', '<style'].forEach((b) => {
   console.log('banned [' + b + ']:', (text.match(new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length);
 });
+
+// No escaped markdown garbage like \<div> or https\://
+console.log('escaped garbage [\\<]:', (text.match(/\\</g) || []).length);
+console.log('escaped garbage [https\\:]:', (text.match(/https\\:/g) || []).length);
