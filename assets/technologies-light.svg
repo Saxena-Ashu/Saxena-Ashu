@@ -1,0 +1,68 @@
+<svg width="420" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technology orbit">
+  <rect x="4" y="4" width="392" height="312" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="200" cy="160" r="140" fill="none" stroke="#0369A1" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 6">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="40s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="160" r="95" fill="none" stroke="#7C3AED" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 4">
+    <animateTransform attributeName="transform" type="rotate" from="360 200 160" to="0 200 160" dur="26s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="160" r="46" fill="#F8FAFC" stroke="#0369A1" stroke-width="2"/>
+  <circle cx="200" cy="160" r="46" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 277">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="200" y="167" font-size="22" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">AS</text>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="18s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 200 20" to="-360 200 20" dur="18s" repeatCount="indefinite"/>
+      <rect x="182" y="2" width="36" height="36" rx="9" fill="#2496ED" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="200" y="26" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Do</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.9s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 60 160" to="-360 60 160" dur="18s" repeatCount="indefinite"/>
+      <rect x="42" y="142" width="36" height="36" rx="9" fill="#61DAFB" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="60" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Re</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.6s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 340 160" to="-360 340 160" dur="18s" repeatCount="indefinite"/>
+      <rect x="322" y="142" width="36" height="36" rx="9" fill="#02569B" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="340" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Fl</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.75s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 200 300" to="-360 200 300" dur="18s" repeatCount="indefinite"/>
+      <rect x="182" y="282" width="36" height="36" rx="9" fill="#336791" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="200" y="306" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Pg</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.05s" fill="freeze"/>
+    </g>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="360 200 160" to="0 200 160" dur="12s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 133 93" to="-360 133 93" dur="12s" repeatCount="indefinite"/>
+      <rect x="115" y="75" width="36" height="36" rx="9" fill="#3178C6" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="133" y="99" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Ts</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.65s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 267 93" to="-360 267 93" dur="12s" repeatCount="indefinite"/>
+      <rect x="249" y="75" width="36" height="36" rx="9" fill="#ffffff" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="267" y="99" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Ex</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.35s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 133 227" to="-360 133 227" dur="12s" repeatCount="indefinite"/>
+      <rect x="115" y="209" width="36" height="36" rx="9" fill="#47A248" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="133" y="233" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Mo</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.5s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 267 227" to="-360 267 227" dur="12s" repeatCount="indefinite"/>
+      <rect x="249" y="209" width="36" height="36" rx="9" fill="#339933" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="267" y="233" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">No</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" fill="freeze"/>
+    </g>
+  </g>
+</svg>

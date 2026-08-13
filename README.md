@@ -1,52 +1,75 @@
 <div align="center">
-  <img src="./assets/header.svg" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4FF,25:22D3EE,50:0077FF,75:8B5CF6,100:00D4FF&height=170&section=header" width="100%" />
+</div>
+
+<!-- ================= HERO ================= -->
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/title-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/title-light.svg" />
+    <img src="./assets/title-light.svg" alt="ASHU SAXENA" width="640" />
+  </picture>
 </div>
 
 <div align="center">
-  <img src="./assets/title.svg" width="640" />
-</div>
 
-<div align="center">
-
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2500&pause=900&color=00D4FF&center=true&vCenter=true&multiline=true&width=760&height=80&lines=Hi%2C+I%27m+Ashu+Saxena;React.js+%7C+Node.js+%7C+Flutter+%7C+TypeScript;Building+products+that+scale" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1400&color=8B949E&center=true&vCenter=true&width=640&lines=Building+scalable+web+%26+mobile+products+with+React%2C+Node.js%2C+Flutter+and+TypeScript" alt="Professional statement" />
 
   <br/>
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=8BA3BF&center=true&vCenter=true&width=700&lines=Full-stack+development+%7C+System+design+%7C+Performance;Lighthouse+95%2B+scores+%7C+YOLOv8+92%25+accuracy;Open+to+Senior+Full-Stack+roles" alt="Typing SVG" />
+  [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/Saxena-Ashu)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saxenaashu)
+  [![Email](https://img.shields.io/badge/ashusaxena4767%40gmail.com-%23EA4335?style=flat&logo=gmail&logoColor=white)](mailto:ashusaxena4767@gmail.com)
+  [![WhatsApp](https://img.shields.io/badge/WhatsApp-%2325D366.svg?style=flat&logo=whatsapp&logoColor=white)](https://wa.me/918439364075)
 
   <br/>
 
-  [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&labelColor=0A0F1C&color=00D4FF)](https://github.com/Saxena-Ashu)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077FF?style=for-the-badge&logo=linkedin&labelColor=0A0F1C)](https://www.linkedin.com/in/saxenaashu)
-  [![Email](https://img.shields.io/badge/ashusaxena4767%40gmail.com-8B5CF6?style=plastic&logo=gmail&labelColor=0A0F1C&logoColor=white)](mailto:ashusaxena4767@gmail.com)
-  [![Phone](https://img.shields.io/badge/%2B91%208439364075-22D3EE?style=for-the-badge&labelColor=0A0F1C)](tel:+918439364075)
-  [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&labelColor=0A0F1C&logoColor=white)](https://wa.me/918439364075)
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/open-to-work-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/open-to-work-light.svg" />
+    <img src="./assets/open-to-work-light.svg" alt="Open to work" width="340" />
+  </picture>
 
 </div>
 
 <br/>
 
-<p align="center">
-  <img src="./assets/open-to-work.svg" width="290" />
-</p>
-
-<br/>
-
 <div align="center">
-  <img src="./assets/divider.svg" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.svg" />
+    <img src="./assets/divider-light.svg" alt="divider" width="100%" />
+  </picture>
 </div>
+
+<!-- ================= ABOUT ================= -->
 
 ## About
 
-Full-Stack Software Engineer who architects and ships products end-to-end — from system design and API architecture to performance optimization and team leadership.
+<div align="center">
 
-- **Location:** Bareilly, UP, India
-- **Email:** ashusaxena4767@gmail.com
-- **Phone:** +91 8439364075
-- **GitHub:** [github.com/Saxena-Ashu](https://github.com/Saxena-Ashu)
-- **Open to:** Senior Full-Stack / SDE roles
+Software Development Engineer building full-stack applications end-to-end — REST API design, system architecture, performance optimization, and scalable delivery with React.js, Node.js, and Flutter.
+
+</div>
 
 ---
+
+<!-- ================= ENGINEERING IMPACT ================= -->
+
+## Engineering Impact
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/metrics-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/metrics-light.svg" />
+    <img src="./assets/metrics-light.svg" alt="Engineering impact" width="560" />
+  </picture>
+</div>
+
+---
+
+<!-- ================= TECH STACK ================= -->
 
 ## Tech Stack
 
@@ -59,44 +82,67 @@ Full-Stack Software Engineer who architects and ships products end-to-end — fr
 ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white)
 ![C](https://img.shields.io/badge/C-%23A8B9CC.svg?style=flat-square&logo=c&logoColor=black)
 
-### Frameworks / Libraries
+### Frontend / Mobile
 ![React](https://img.shields.io/badge/React.js-%2361DAFB.svg?style=flat-square&logo=react&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-%23000000.svg?style=flat-square&logo=express&logoColor=white)
 ![AngularJS](https://img.shields.io/badge/AngularJS-%23E23237.svg?style=flat-square&logo=angular&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat-square&logo=flutter&logoColor=white)
+
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-%23000000.svg?style=flat-square&logo=express&logoColor=white)
 
 ### Databases
 ![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=flat-square&logo=mongodb&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat-square&logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=flat-square&logo=postgresql&logoColor=white)
 
-### DevOps & Tools
+### Cloud / DevOps
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazonwebservices&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)
+
+### Productivity / Business Tools
 ![Power BI](https://img.shields.io/badge/Power%20BI-%23F2C811.svg?style=flat-square&logo=powerbi&logoColor=black)
 ![Power Apps](https://img.shields.io/badge/Power%20Apps-%2374276F.svg?style=flat-square&logo=powerapps&logoColor=white)
 ![Power Automate](https://img.shields.io/badge/Power%20Automate-%230066FF.svg?style=flat-square&logo=powerautomate&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat-square&logo=figma&logoColor=white)
 
-### Core Competencies
-
-<img src="./assets/competencies.svg" width="500" />
-
 </div>
 
 ---
+
+<!-- ================= ENGINEERING CAPABILITIES ================= -->
+
+## Engineering Capabilities
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/competencies-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/competencies-light.svg" />
+    <img src="./assets/competencies-light.svg" alt="Engineering capabilities" width="560" />
+  </picture>
+</div>
+
+---
+
+<!-- ================= TECHNOLOGIES ================= -->
 
 ## Technologies
 
 <div align="center">
-  <img src="./assets/technologies.svg" width="420" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/technologies-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/technologies-light.svg" />
+    <img src="./assets/technologies-light.svg" alt="Technology orbit" width="420" />
+  </picture>
   <br/>
-  <sub><i>React · Node.js · Express.js · Flutter · MongoDB · Docker · PostgreSQL · TypeScript</i></sub>
+  <sub><i>React.js · Node.js · Express.js · Flutter · MongoDB · PostgreSQL · TypeScript · Docker</i></sub>
 </div>
 
 ---
+
+<!-- ================= EXPERIENCE ================= -->
 
 ## Experience
 
@@ -105,10 +151,10 @@ Full-Stack Software Engineer who architects and ships products end-to-end — fr
 
 <br/>
 
-- **Architected and delivered** full-stack web applications at scale (React.js, Node.js, Flutter)
-- **Designed and implemented** RESTful APIs — reduced response times through query optimization and caching
-- **Owned frontend performance** — code splitting, lazy loading, and image optimization to hold 95+ Lighthouse scores
-- **Led a cross-functional team** delivering mobile-first solutions, lifting user engagement by 30%
+- **Architected and deployed 3 full-stack web applications** serving 10K+ monthly active users using React.js, Node.js, and Flutter
+- **Designed and implemented 15+ RESTful APIs**, reducing average response time by 40% through query optimization and caching strategies
+- **Optimized frontend performance** achieving 95+ scores on Lighthouse through code splitting, lazy loading, and image optimization
+- **Led a cross-functional team of 5 engineers** to deliver mobile-first solutions, resulting in 30% increase in user engagement
 
 </details>
 
@@ -117,143 +163,174 @@ Full-Stack Software Engineer who architects and ships products end-to-end — fr
 
 <br/>
 
-- **Built PreBid Tracker** serving 200+ internal users — reduced bid processing time by 50%
-- **Automated 15+ workflow processes** with Power Automate, saving 20+ hours weekly
-- **Created PowerBI dashboards** delivering real-time analytics to 50+ stakeholders
-- **Engineered Worker Monitoring System** (YOLOv8 + MediaPipe) with 92% activity recognition accuracy
+- **Developed PreBid Tracker** serving 200+ internal users, streamlining tender management and reducing bid processing time by 50%
+- **Automated 15+ workflow processes** using Power Automate, eliminating manual interventions and saving 20+ hours weekly
+- **Built interactive PowerBI dashboards** providing real-time analytics to 50+ stakeholders, enabling data-driven decision making
+- **Built a Worker Monitoring System** with systematized reporting, as a supporting engineering initiative within the internship scope
 
 </details>
 
 ---
 
+<!-- ================= PROJECTS ================= -->
+
 ## Projects
 
 ### TECHVOYM — Technical Fest Registration Portal
 
-```
-Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • Docker
-```
-
-> End-to-end registration platform architected for peak traffic — 800+ concurrent users sustained at 99.9% uptime.
-
-| Metric | Detail |
-|---|---|
-| Scale | **800+** concurrent users with **99.9% uptime** during peak traffic |
-| Backend | Node.js + MongoDB → **500+** individual & **300+** team registrations |
-| Reliability | Real-time validation & error handling → **60% fewer** registration failures |
-| Monitoring | Computerized monitoring + alert system → **100% data integrity** over 72-hour window |
-
 <div align="center">
 
-<sub><i>platform scale — bars grow on load</i></sub>
-
-<img src="./assets/project-metrics.svg" width="560" />
+![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-%23000000.svg?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=flat-square&logo=mongodb&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat-square&logo=javascript&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)
 
 </div>
 
----
+**Problem** — A technical fest needed an end-to-end registration platform that could handle peak traffic without failing: hundreds of concurrent users, individual and team signups, and zero tolerance for data loss across a 72-hour registration window.
 
-## Key Metrics
+**Solution** — Architected a full-stack platform with Node.js and Express.js backed by MongoDB, fronted with HTML5/CSS3/JavaScript, containerized with Docker, and hardened with real-time validation and error handling plus a computerized monitoring and alert system.
 
-<div align="center">
-
-<sub><i>key outcomes, quantified — gauges fill on load</i></sub>
-
-<img src="./assets/key-metrics.svg" width="450" />
-
-</div>
-
----
-
-## Education
-
-### SRMS College of Engineering Technology & Research
-
-**B.Tech in Computer Science & Engineering** — CGPA: `7.29/10` | *Expected May 2026* | Bareilly, UP, India
-
-- **Coursework:** Data Structures & Algorithms · Operating Systems · DBMS · Computer Networks · Software Engineering
-- **Smart India Hackathon 2025** — Participant
-- **United Group of Institutions Hackathon 2024** — 2nd Place
-
-<br/>
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1100&color=0077FF&center=true&vCenter=true&width=760&lines=Smart+India+Hackathon+2025+%7C+Participant;United+Group+Hackathon+2024+%7C+2nd+Place;CGPA+7.29%2F10+%7C+B.Tech+CSE+%40+SRMS+College" alt="Achievements typing SVG" />
-</div>
-
----
-
-## Engineering Principles
-
-- **Scale-first design** — systems built for scale from day one
-- **Measure everything** — 95+ Lighthouse, 99.9% uptime, measurable wins
-- **Ship iteratively** — real-time validation cut registration failures by 60%
-- **Lead by building** — cross-functional teams, mobile-first delivery, engagement +30%
-
-<div align="center">
-  <img src="./assets/principles.svg" width="520" />
-</div>
-
----
-
-## GitHub Stats
-
-<div align="center">
-
-![GitHub Followers](https://img.shields.io/github/followers/Saxena-Ashu?style=for-the-badge&logo=github&labelColor=0A0F1C&color=00D4FF)
-![GitHub Stars](https://img.shields.io/github/stars/Saxena-Ashu?style=for-the-badge&logo=github&labelColor=0A0F1C&color=0077FF)
-![Repositories](https://img.shields.io/github/repos/Saxena-Ashu?style=for-the-badge&logo=github&labelColor=0A0F1C&color=8B5CF6)
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0A0F1C&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=340" width="95%" />
-
-<!-- The github-readme-stats cards were removed while that service is down (HTTP 503). Restore them here once it recovers. -->
-
-</div>
-
----
-
-## Contribution Activity
-
-<!--
-  The snake below renders instantly from snake.svg (upload that file to the
-  repo root). It becomes auto-updating if you also run the workflow once:
-  Actions → "Generate Snake" → Run workflow → creates the "output" branch.
--->
+**Architecture** — Traffic → API → Validation → Database → Monitoring:
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/output/github-contribution-grid-snake.svg" />
-    <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/main/snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/techvoym-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/techvoym-light.svg" />
+    <img src="./assets/techvoym-light.svg" alt="TECHVOYM architecture" width="560" />
   </picture>
 </div>
 
+**Scale & Impact**
+
+| Metric | Detail |
+|---|---|
+| Scale | **800+** concurrent users sustained at **99.9%** uptime |
+| Registrations | **500+** individual and **300+** team registrations |
+| Reliability | **60% fewer** registration failures via real-time validation |
+| Integrity | **100%** data integrity across the 72-hour window |
+
 ---
+
+<!-- ================= EDUCATION ================= -->
+
+## Education
+
+<div align="center">
+
+### SRMS College of Engineering Technology & Research
+
+**B.Tech in Computer Science & Engineering** — CGPA: `7.29/10` · *Expected May 2026* · Bareilly, UP, India
+
+**Coursework:** Data Structures & Algorithms · Operating Systems · Database Management Systems · Computer Networks · Software Engineering
+
+</div>
+
+---
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+## Achievements
+
+<div align="center">
+
+| Achievement | Result |
+|---|---|
+| **Smart India Hackathon 2025** | Participant |
+| **United Group of Institutions Hackathon 2024** | 2nd Place |
+
+</div>
+
+---
+
+<!-- ================= GITHUB ACTIVITY ================= -->
+
+## GitHub Activity
+
+<div align="center">
+
+![GitHub Followers](https://img.shields.io/github/followers/Saxena-Ashu?style=flat&logo=github&labelColor=0D1117&color=00D4FF)
+![GitHub Stars](https://img.shields.io/github/stars/Saxena-Ashu?style=flat&logo=github&labelColor=0D1117&color=0077FF)
+![Repositories](https://img.shields.io/github/repos/Saxena-Ashu?style=flat&logo=github&labelColor=0D1117&color=8B5CF6)
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0D1117&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=300" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-light&bg_color=F8FAFC&color=0369A1&line=2563EB&point=7C3AED&area=true&hide_border=true&radius=16&height=300" />
+  <img alt="Contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0D1117&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=300" width="95%" />
+</picture>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/Saxena-Ashu/Saxena-Ashu/main/snake.svg" width="100%" />
+</picture>
+
+<!-- The snake is generated by .github/workflows/snake.yml (daily at midnight
+     UTC, or manually: Actions → "Generate Snake" → Run workflow). Until the
+     "output" branch exists, the fallback ./snake.svg at the repo root renders.
+     The github-readme-stats cards are disabled while that service is down (503). -->
+
+</div>
+
+---
+
+<!-- ================= PING PONG ================= -->
 
 ## Ping Pong
 
 <div align="center">
 
-<img src="./assets/ping-pong.svg" width="640" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/ping-pong-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/ping-pong-light.svg" />
+    <img src="./assets/ping-pong-light.svg" alt="Ping pong preview" width="640" />
+  </picture>
 
-<sub><i>auto-rally — no input needed</i></sub>
+  <br/>
+
+  <a href="https://saxena-ashu.github.io/Saxena-Ashu/ping-pong/">
+    <img src="https://img.shields.io/badge/Play%20Ping%20Pong-00D4FF?style=for-the-badge&labelColor=0D1117&logoColor=white" alt="Play Ping Pong" />
+  </a>
+
+  <br/>
+  <sub><i>manual game — W/S or ↑/↓ · first to 7 · player vs computer</i></sub>
 
 </div>
+
+<!-- The game is a real page in this repo: ping-pong/ (index.html, style.css,
+     game.js). To make the PLAY button work, enable GitHub Pages on
+     Saxena-Ashu/Saxena-Ashu → Settings → Pages → Deploy from branch → main / (root). -->
 
 ---
 
-<div align="center">
-  <img src="./assets/divider.svg" width="100%" />
-</div>
+<!-- ================= CONTACT ================= -->
+
+## Contact
 
 <div align="center">
 
-<img src="./assets/footer.svg" width="560" />
-
-<br/>
+```
+┌─────────────────────────────────────────────┐
+│  Mail  : ashusaxena4767@gmail.com           │
+│  Phone : +91 8439364075                     │
+│  City  : Bareilly, UP, India                │
+│  Open  : Software Engineering roles         │
+└─────────────────────────────────────────────┘
+```
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Saxena-Ashu&color=00D4FF&style=flat-square&label=Profile+Views)
 
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4FF,25:22D3EE,50:0077FF,75:8B5CF6,100:00D4FF&height=120&section=footer" width="100%" />
 </div>

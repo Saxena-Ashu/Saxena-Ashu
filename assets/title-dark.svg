@@ -1,0 +1,31 @@
+<svg width="640" height="110" viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ASHU SAXENA">
+  <defs>
+    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF">
+        <animate attributeName="stop-color" values="#00D4FF;#8B5CF6;#0077FF;#00D4FF" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#0077FF">
+        <animate attributeName="stop-color" values="#0077FF;#00D4FF;#8B5CF6;#0077FF" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#8B5CF6">
+        <animate attributeName="stop-color" values="#8B5CF6;#0077FF;#00D4FF;#8B5CF6" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tg)">
+    <text x="20" y="74">A</text>
+    <text x="56" y="74">S</text>
+    <text x="92" y="74">H</text>
+    <text x="128" y="74">U</text>
+    <text x="182" y="74">S</text>
+    <text x="218" y="74">A</text>
+    <text x="254" y="74">X</text>
+    <text x="290" y="74">E</text>
+    <text x="326" y="74">N</text>
+    <text x="362" y="74">A</text>
+  </g>
+  <text x="10" y="100" font-family="monospace" font-size="15" fill="#8B949E">Software Development Engineer</text>
+  <rect x="404" y="87" width="7" height="12" fill="#00D4FF">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

@@ -1,0 +1,43 @@
+<svg width="560" height="240" viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering capabilities">
+  <g>
+    <rect x="16" y="16" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="30" width="3" height="14" rx="1.5" fill="#00D4FF"/>
+    <text x="44" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Backend Engineering</text>
+  </g>
+  <g>
+    <rect x="288" y="16" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="30" width="3" height="14" rx="1.5" fill="#0077FF"/>
+    <text x="316" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">REST API Design</text>
+  </g>
+  <g>
+    <rect x="16" y="72" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="86" width="3" height="14" rx="1.5" fill="#8B5CF6"/>
+    <text x="44" y="99" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">System Design</text>
+  </g>
+  <g>
+    <rect x="288" y="72" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="86" width="3" height="14" rx="1.5" fill="#22D3EE"/>
+    <text x="316" y="99" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Database Design</text>
+  </g>
+  <g>
+    <rect x="16" y="128" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="142" width="3" height="14" rx="1.5" fill="#00D4FF"/>
+    <text x="44" y="155" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Performance Optimization</text>
+  </g>
+  <g>
+    <rect x="288" y="128" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="142" width="3" height="14" rx="1.5" fill="#0077FF"/>
+    <text x="316" y="155" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Full-Stack Development</text>
+  </g>
+  <g>
+    <rect x="16" y="184" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="198" width="3" height="14" rx="1.5" fill="#8B5CF6"/>
+    <text x="44" y="211" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Mobile Development</text>
+  </g>
+  <g>
+    <rect x="288" y="184" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="198" width="3" height="14" rx="1.5" fill="#22D3EE"/>
+    <text x="316" y="211" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Cloud & DevOps</text>
+  </g>
+
+</svg>

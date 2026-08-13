@@ -1,0 +1,7 @@
+<svg width="340" height="36" viewBox="0 0 340 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open to work">
+  <circle cx="20" cy="18" r="10" fill="#00D4FF" opacity="0.35">
+    <animate attributeName="opacity" values="0.35;0.08;0.35" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="20" cy="18" r="6.5" fill="#00D4FF"/>
+  <text x="38" y="24" font-size="14" font-family="monospace" fill="#F0F6FC">Open to Software Engineering Opportunities</text>
+</svg>

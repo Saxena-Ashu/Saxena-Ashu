@@ -5,314 +5,567 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ashu Saxena — GitHub Profile</title>
 <style>
-  body { margin: 0; background: #0A0F1C; color: #E6F1FF;
+  :root {
+    --bg: #0D1117; --fg: #F0F6FC; --muted: #8B949E;
+    --card: #111827; --border: #30363D; --accent: #00D4FF; --accent2: #0077FF;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #F8FAFC; --fg: #0F172A; --muted: #475569;
+      --card: #FFFFFF; --border: #CBD5E1; --accent: #0369A1; --accent2: #2563EB;
+    }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-         -webkit-font-smoothing: antialiased; }
+         -webkit-font-smoothing: antialiased; transition: background .2s, color .2s; }
   main { max-width: 960px; margin: 0 auto; padding: 24px 16px 72px; }
   h2 { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-       color: #00D4FF; border-bottom: 1px solid #1E3A5F; padding-bottom: .3em; margin-top: 2em; }
-  h3 { color: #22D3EE; }
-  pre { background: #111827; border: 1px solid #1E3A5F; border-radius: 6px; padding: 14px 16px; overflow-x: auto; }
+       color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: .3em; margin-top: 2em; }
+  h3 { color: var(--accent2); }
+  pre { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; overflow-x: auto; }
   code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-         font-size: 13px; background: rgba(139,163,191,.15); border-radius: 4px; padding: 1px 4px; }
+         font-size: 13px; background: rgba(110,118,129,.2); border-radius: 4px; padding: 1px 4px; }
   pre code { background: none; padding: 0; }
   table { border-collapse: collapse; width: 100%; margin: 10px 0; }
-  th, td { border: 1px solid #1E3A5F; padding: 8px 12px; text-align: left; }
-  th { background: #111827; color: #00D4FF; }
-  a { color: #00D4FF; }
+  th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+  th { background: var(--card); color: var(--accent); }
+  a { color: var(--accent); }
   img { max-width: 100%; }
-  details { border: 1px solid #1E3A5F; border-radius: 6px; padding: 8px 12px; background: #111827; margin: 10px 0; }
+  details { border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; background: var(--card); margin: 10px 0; }
   summary { cursor: pointer; }
-  blockquote { border-left: 4px solid #1E3A5F; padding-left: 12px; color: #8BA3BF; margin: 10px 0; }
-  hr { border: 0; border-top: 1px solid #1E3A5F; margin: 24px 0; }
+  blockquote { border-left: 4px solid var(--border); padding-left: 12px; color: var(--muted); margin: 10px 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
   p { line-height: 1.5; }
   ul { padding-left: 1.6em; }
   li { margin: 4px 0; line-height: 1.5; }
+  .theme-dark { display: block; }
+  .theme-light { display: none; }
+  @media (prefers-color-scheme: light) {
+    .theme-dark { display: none; }
+    .theme-light { display: block; }
+  }
 </style>
 </head>
 <body>
 <main>
 <div align="center">
-  <svg height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ashu Saxena — header" width="100%">
-  <defs>
-    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="50%" stop-color="#0077FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22D3EE"/>
-      <stop offset="50%" stop-color="#0077FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="1200" height="200" fill="#0A0F1C"/>
-
-  <!-- subtle cyber grid -->
-  <g stroke="#1E3A5F" stroke-opacity="0.35">
-    <line x1="0" y1="40" x2="1200" y2="40"/>
-    <line x1="0" y1="80" x2="1200" y2="80"/>
-    <line x1="0" y1="120" x2="1200" y2="120"/>
-    <line x1="0" y1="160" x2="1200" y2="160"/>
-    <line x1="300" y1="0" x2="300" y2="120"/>
-    <line x1="600" y1="0" x2="600" y2="120"/>
-    <line x1="900" y1="0" x2="900" y2="120"/>
-  </g>
-
-  <!-- twinkling grid nodes -->
-  <g>
-    <circle cx="300" cy="40" r="2.5" fill="#00D4FF">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="2.1s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="1.5;3;1.5" dur="2.1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="600" cy="80" r="2.5" fill="#22D3EE">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="2.8s" begin="0.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="900" cy="40" r="2.5" fill="#8B5CF6">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="2.4s" begin="0.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="150" cy="120" r="2" fill="#0077FF">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="3.2s" begin="1.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1050" cy="120" r="2" fill="#00D4FF">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="450" cy="80" r="2" fill="#8B5CF6">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="3s" begin="1.7s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="750" cy="40" r="2" fill="#22D3EE">
-      <animate attributeName="opacity" values="0.15;1;0.15" dur="2.2s" begin="0.2s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- upper glow band -->
-  <path d="M0 60 C 200 20, 400 90, 600 55 S 1000 20, 1200 65 L 1200 0 L 0 0 Z" fill="#0077FF" opacity="0.12">
-    <animateTransform attributeName="transform" type="translate" values="0 0;-40 0;0 0;40 0;0 0" dur="14s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- back wave -->
-  <g opacity="0.55">
-    <path d="M-80 130 C 80 95, 220 165, 380 132 S 620 100, 780 132 S 1020 168, 1200 132 L 1200 200 L -80 200 Z" fill="url(#waveGrad2)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;-70 0;0 0;70 0;0 0" dur="9s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- main wave -->
-  <g>
-    <path d="M-60 150 C 100 115, 240 185, 400 152 S 640 118, 800 152 S 1040 188, 1220 152 L 1220 200 L -60 200 Z" fill="url(#waveGrad)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;70 0;0 0;-70 0;0 0" dur="10s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- light sweep across the wave -->
-  <g transform="skewX(-18)">
-    <rect x="-300" y="110" width="150" height="90" fill="#E6F1FF" opacity="0.10">
-      <animateTransform attributeName="transform" type="translate" values="0 0;1500 0" dur="5s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-</svg>
-
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4FF,25:22D3EE,50:0077FF,75:8B5CF6,100:00D4FF&height=170&section=header" width="100%" />
 </div>
+<!-- ================= HERO ================= -->
 <div align="center">
-  <svg height="110" viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ASHU SAXENA" width="640">
+  <div class="theme-dark"><svg width="640" height="110" viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ASHU SAXENA">
   <defs>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00D4FF">
-        <animate attributeName="stop-color" values="#00D4FF;#8B5CF6;#0077FF;#00D4FF" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#00D4FF;#8B5CF6;#0077FF;#00D4FF" dur="8s" repeatCount="indefinite"/>
       </stop>
       <stop offset="50%" stop-color="#0077FF">
-        <animate attributeName="stop-color" values="#0077FF;#00D4FF;#8B5CF6;#0077FF" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#0077FF;#00D4FF;#8B5CF6;#0077FF" dur="8s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="#8B5CF6">
-        <animate attributeName="stop-color" values="#8B5CF6;#0077FF;#00D4FF;#8B5CF6" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#8B5CF6;#0077FF;#00D4FF;#8B5CF6" dur="8s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
   </defs>
-
-  <g font-family="monospace" font-size="56" font-weight="bold" fill="url(#titleGrad)">
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.00s"/><text x="20" y="78">A</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.10s"/><text x="56" y="78">S</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.20s"/><text x="92" y="78">H</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.30s"/><text x="128" y="78">U</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.50s"/><text x="182" y="78">S</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.60s"/><text x="218" y="78">A</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.70s"/><text x="254" y="78">X</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.80s"/><text x="290" y="78">E</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="0.90s"/><text x="326" y="78">N</text></g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.5s" repeatCount="indefinite" begin="1.00s"/><text x="362" y="78">A</text></g>
+  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tg)">
+    <text x="20" y="74">A</text>
+    <text x="56" y="74">S</text>
+    <text x="92" y="74">H</text>
+    <text x="128" y="74">U</text>
+    <text x="182" y="74">S</text>
+    <text x="218" y="74">A</text>
+    <text x="254" y="74">X</text>
+    <text x="290" y="74">E</text>
+    <text x="326" y="74">N</text>
+    <text x="362" y="74">A</text>
   </g>
-
-  <text x="10" y="103" font-family="monospace" font-size="16" fill="#8BA3BF">// full-stack software engineer</text>
-  <rect x="420" y="90" width="7" height="13" fill="#00D4FF">
-    <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+  <text x="10" y="100" font-family="monospace" font-size="15" fill="#8B949E">Software Development Engineer</text>
+  <rect x="404" y="87" width="7" height="12" fill="#00D4FF">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
   </rect>
 </svg>
-
-</div>
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2500&pause=900&color=00D4FF&center=true&vCenter=true&multiline=true&width=760&height=80&lines=Hi%2C+I%27m+Ashu+Saxena;React.js+%7C+Node.js+%7C+Flutter+%7C+TypeScript;Building+products+that+scale" alt="Typing SVG" />
-  <br/>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=8BA3BF&center=true&vCenter=true&width=700&lines=Full-stack+development+%7C+System+design+%7C+Performance;Lighthouse+95%2B+scores+%7C+YOLOv8+92%25+accuracy;Open+to+Senior+Full-Stack+roles" alt="Typing SVG" />
-  <br/>
-<p><a href="https://github.com/Saxena-Ashu"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&labelColor=0A0F1C&color=00D4FF" alt="GitHub" /></a> <a href="https://www.linkedin.com/in/saxenaashu"><img src="https://img.shields.io/badge/LinkedIn-0077FF?style=for-the-badge&logo=linkedin&labelColor=0A0F1C" alt="LinkedIn" /></a> <a href="mailto:ashusaxena4767@gmail.com"><img src="https://img.shields.io/badge/ashusaxena4767%40gmail.com-8B5CF6?style=plastic&logo=gmail&labelColor=0A0F1C&logoColor=white" alt="Email" /></a> <a href="tel:+918439364075"><img src="https://img.shields.io/badge/%2B91%208439364075-22D3EE?style=for-the-badge&labelColor=0A0F1C" alt="Phone" /></a> <a href="https://wa.me/918439364075"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&labelColor=0A0F1C&logoColor=white" alt="WhatsApp" /></a></p>
-</div>
-<br/>
-<p align="center">
-  <svg height="36" viewBox="0 0 290 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open to work" width="290">
-  <circle cx="20" cy="18" r="10" fill="#00D4FF" opacity="0.4">
-    <animate attributeName="r" values="8;14;8" dur="1.6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.6s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="20" cy="18" r="8" fill="#00D4FF"/>
-  <text x="38" y="24" font-size="15" font-family="monospace" font-weight="bold" fill="#00D4FF">OPEN TO WORK</text>
-  <rect x="196" y="23" width="6" height="5" rx="1.5" fill="#00D4FF">
-    <animate attributeName="height" values="5;16;6;5" dur="1.1s" repeatCount="indefinite"/>
-    <animate attributeName="y" values="23;12;22;23" dur="1.1s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="206" y="22" width="6" height="6" rx="1.5" fill="#22D3EE">
-    <animate attributeName="height" values="6;12;8;6" dur="1.1s" repeatCount="indefinite" begin="0.15s"/>
-    <animate attributeName="y" values="22;16;20;22" dur="1.1s" repeatCount="indefinite" begin="0.15s"/>
-  </rect>
-  <rect x="216" y="21" width="6" height="7" rx="1.5" fill="#8B5CF6">
-    <animate attributeName="height" values="7;18;9;7" dur="1.1s" repeatCount="indefinite" begin="0.3s"/>
-    <animate attributeName="y" values="21;10;19;21" dur="1.1s" repeatCount="indefinite" begin="0.3s"/>
-  </rect>
-  <rect x="226" y="23" width="6" height="5" rx="1.5" fill="#0077FF">
-    <animate attributeName="height" values="5;13;7;5" dur="1.1s" repeatCount="indefinite" begin="0.45s"/>
-    <animate attributeName="y" values="23;15;21;23" dur="1.1s" repeatCount="indefinite" begin="0.45s"/>
-  </rect>
-</svg>
-
-</p>
-<br/>
-<div align="center">
-  <svg height="4" viewBox="0 0 100 4" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="divider" width="100%">
+</div><div class="theme-light"><svg width="640" height="110" viewBox="0 0 640 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ASHU SAXENA">
   <defs>
-    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369A1">
+        <animate attributeName="stop-color" values="#0369A1;#7C3AED;#2563EB;#0369A1" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#2563EB">
+        <animate attributeName="stop-color" values="#2563EB;#0369A1;#7C3AED;#2563EB" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#7C3AED">
+        <animate attributeName="stop-color" values="#7C3AED;#2563EB;#0369A1;#7C3AED" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  <g font-family="monospace" font-size="54" font-weight="bold" fill="url(#tg)">
+    <text x="20" y="74">A</text>
+    <text x="56" y="74">S</text>
+    <text x="92" y="74">H</text>
+    <text x="128" y="74">U</text>
+    <text x="182" y="74">S</text>
+    <text x="218" y="74">A</text>
+    <text x="254" y="74">X</text>
+    <text x="290" y="74">E</text>
+    <text x="326" y="74">N</text>
+    <text x="362" y="74">A</text>
+  </g>
+  <text x="10" y="100" font-family="monospace" font-size="15" fill="#475569">Software Development Engineer</text>
+  <rect x="404" y="87" width="7" height="12" fill="#0369A1">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
+</div>
+</div>
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1400&color=8B949E&center=true&vCenter=true&width=640&lines=Building+scalable+web+%26+mobile+products+with+React%2C+Node.js%2C+Flutter+and+TypeScript" alt="Professional statement" />
+  <br/>
+<p><a href="https://github.com/Saxena-Ashu"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat&logo=github&logoColor=white" alt="GitHub" /></a> <a href="https://www.linkedin.com/in/saxenaashu"><img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a> <a href="mailto:ashusaxena4767@gmail.com"><img src="https://img.shields.io/badge/ashusaxena4767%40gmail.com-%23EA4335?style=flat&logo=gmail&logoColor=white" alt="Email" /></a> <a href="https://wa.me/918439364075"><img src="https://img.shields.io/badge/WhatsApp-%2325D366.svg?style=flat&logo=whatsapp&logoColor=white" alt="WhatsApp" /></a></p>
+  <br/>
+  <div class="theme-dark"><svg width="340" height="36" viewBox="0 0 340 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open to work">
+  <circle cx="20" cy="18" r="10" fill="#00D4FF" opacity="0.35">
+    <animate attributeName="opacity" values="0.35;0.08;0.35" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="20" cy="18" r="6.5" fill="#00D4FF"/>
+  <text x="38" y="24" font-size="14" font-family="monospace" fill="#F0F6FC">Open to Software Engineering Opportunities</text>
+</svg>
+</div><div class="theme-light"><svg width="340" height="36" viewBox="0 0 340 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open to work">
+  <circle cx="20" cy="18" r="10" fill="#0369A1" opacity="0.35">
+    <animate attributeName="opacity" values="0.35;0.08;0.35" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="20" cy="18" r="6.5" fill="#0369A1"/>
+  <text x="38" y="24" font-size="14" font-family="monospace" fill="#0F172A">Open to Software Engineering Opportunities</text>
+</svg>
+</div>
+</div>
+<br/>
+<div align="center">
+  <div class="theme-dark"><svg width="100%" height="4" viewBox="0 0 100 4" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="dg" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00D4FF"/>
       <stop offset="50%" stop-color="#0077FF"/>
       <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="4" fill="url(#divGrad)"/>
-  <rect width="18" height="4" fill="#E6F1FF" opacity="0.6">
+  <rect width="100" height="4" fill="url(#dg)"/>
+  <rect width="18" height="4" fill="#E6EDF3" opacity="0.5">
     <animate attributeName="x" values="-18;100" dur="3.5s" repeatCount="indefinite"/>
   </rect>
 </svg>
-
+</div><div class="theme-light"><svg width="100%" height="4" viewBox="0 0 100 4" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="dg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369A1"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="4" fill="url(#dg)"/>
+  <rect width="18" height="4" fill="#0F172A" opacity="0.5">
+    <animate attributeName="x" values="-18;100" dur="3.5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
 </div>
+</div>
+<!-- ================= ABOUT ================= -->
 <h2>About</h2>
-<p>Full-Stack Software Engineer who architects and ships products end-to-end — from system design and API architecture to performance optimization and team leadership.</p>
-<ul><li><strong>Location:</strong> Bareilly, UP, India</li><li><strong>Email:</strong> ashusaxena4767@gmail.com</li><li><strong>Phone:</strong> +91 8439364075</li><li><strong>GitHub:</strong> <a href="https://github.com/Saxena-Ashu">github.com/Saxena-Ashu</a></li><li><strong>Open to:</strong> Senior Full-Stack / SDE roles</li></ul>
+<div align="center">
+<p>Software Development Engineer building full-stack applications end-to-end — REST API design, system architecture, performance optimization, and scalable delivery with React.js, Node.js, and Flutter.</p>
+</div>
 <hr/>
+<!-- ================= ENGINEERING IMPACT ================= -->
+<h2>Engineering Impact</h2>
+<div align="center">
+  <div class="theme-dark"><svg width="560" height="488" viewBox="0 0 560 488" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering impact">
+  <g>
+    <rect x="16" y="16" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="100" y="64" font-size="24" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.20s" fill="freeze"/>10K+</text>
+    <text x="100" y="86" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">MONTHLY ACTIVE</text>
+    <text x="100" y="100" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">USERS</text>
+    <rect x="70" y="108" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="70" y="108" width="0" height="3" rx="1.5" fill="#00D4FF">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.30s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="16" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="280" y="64" font-size="24" font-family="monospace" font-weight="bold" fill="#0077FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.31s" fill="freeze"/>15+</text>
+    <text x="280" y="86" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">REST</text>
+    <text x="280" y="100" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">APIs</text>
+    <rect x="250" y="108" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="250" y="108" width="0" height="3" rx="1.5" fill="#0077FF">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.41s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="16" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="460" y="64" font-size="24" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.42s" fill="freeze"/>40%</text>
+    <text x="460" y="86" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">RESPONSE TIME</text>
+    <text x="460" y="100" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">IMPROVEMENT</text>
+    <rect x="430" y="108" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="430" y="108" width="0" height="3" rx="1.5" fill="#8B5CF6">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.52s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="16" y="134" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="100" y="182" font-size="24" font-family="monospace" font-weight="bold" fill="#22D3EE" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.53s" fill="freeze"/>95+</text>
+    <text x="100" y="204" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">LIGHTHOUSE</text>
+    <text x="100" y="218" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">SCORE</text>
+    <rect x="70" y="226" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="70" y="226" width="0" height="3" rx="1.5" fill="#22D3EE">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.63s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="134" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="280" y="182" font-size="24" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.64s" fill="freeze"/>30%</text>
+    <text x="280" y="204" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">USER</text>
+    <text x="280" y="218" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">ENGAGEMENT</text>
+    <rect x="250" y="226" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="250" y="226" width="0" height="3" rx="1.5" fill="#00D4FF">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.74s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="134" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="460" y="182" font-size="24" font-family="monospace" font-weight="bold" fill="#0077FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.75s" fill="freeze"/>800+</text>
+    <text x="460" y="204" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">CONCURRENT</text>
+    <text x="460" y="218" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">USERS</text>
+    <rect x="430" y="226" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="430" y="226" width="0" height="3" rx="1.5" fill="#0077FF">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.85s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="16" y="252" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="100" y="300" font-size="24" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.86s" fill="freeze"/>99.9%</text>
+    <text x="100" y="322" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">UPTIME</text>
+    
+    <rect x="70" y="344" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="70" y="344" width="0" height="3" rx="1.5" fill="#8B5CF6">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.96s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="252" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="280" y="300" font-size="24" font-family="monospace" font-weight="bold" fill="#22D3EE" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.97s" fill="freeze"/>500+</text>
+    <text x="280" y="322" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">INDIVIDUAL</text>
+    <text x="280" y="336" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">REGISTRATIONS</text>
+    <rect x="250" y="344" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="250" y="344" width="0" height="3" rx="1.5" fill="#22D3EE">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.07s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="252" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="460" y="300" font-size="24" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.08s" fill="freeze"/>300+</text>
+    <text x="460" y="322" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">TEAM</text>
+    <text x="460" y="336" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">REGISTRATIONS</text>
+    <rect x="430" y="344" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="430" y="344" width="0" height="3" rx="1.5" fill="#00D4FF">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.18s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="16" y="370" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="100" y="418" font-size="24" font-family="monospace" font-weight="bold" fill="#0077FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.19s" fill="freeze"/>60%</text>
+    <text x="100" y="440" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">FEWER</text>
+    <text x="100" y="454" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">FAILURES</text>
+    <rect x="70" y="462" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="70" y="462" width="0" height="3" rx="1.5" fill="#0077FF">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.29s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="370" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="280" y="418" font-size="24" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.30s" fill="freeze"/>100%</text>
+    <text x="280" y="440" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">DATA</text>
+    <text x="280" y="454" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">INTEGRITY</text>
+    <rect x="250" y="462" width="60" height="3" rx="1.5" fill="#21262D"/>
+    <rect x="250" y="462" width="0" height="3" rx="1.5" fill="#8B5CF6">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.40s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="370" width="168" height="104" rx="12" fill="#161B22" stroke="#30363D"/>
+    <text x="460" y="416" font-size="13" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle">BUILD.</text>
+    <text x="460" y="434" font-size="13" font-family="monospace" font-weight="bold" fill="#0077FF" text-anchor="middle">OPTIMIZE.</text>
+    <text x="460" y="452" font-size="13" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle">SCALE.</text>
+  </g>
+
+</svg>
+</div><div class="theme-light"><svg width="560" height="488" viewBox="0 0 560 488" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering impact">
+  <g>
+    <rect x="16" y="16" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="100" y="64" font-size="24" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.20s" fill="freeze"/>10K+</text>
+    <text x="100" y="86" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">MONTHLY ACTIVE</text>
+    <text x="100" y="100" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">USERS</text>
+    <rect x="70" y="108" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="70" y="108" width="0" height="3" rx="1.5" fill="#0369A1">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.30s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="16" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="280" y="64" font-size="24" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.31s" fill="freeze"/>15+</text>
+    <text x="280" y="86" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">REST</text>
+    <text x="280" y="100" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">APIs</text>
+    <rect x="250" y="108" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="250" y="108" width="0" height="3" rx="1.5" fill="#2563EB">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.41s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="16" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="460" y="64" font-size="24" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.42s" fill="freeze"/>40%</text>
+    <text x="460" y="86" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">RESPONSE TIME</text>
+    <text x="460" y="100" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">IMPROVEMENT</text>
+    <rect x="430" y="108" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="430" y="108" width="0" height="3" rx="1.5" fill="#7C3AED">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.52s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="16" y="134" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="100" y="182" font-size="24" font-family="monospace" font-weight="bold" fill="#0891B2" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.53s" fill="freeze"/>95+</text>
+    <text x="100" y="204" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">LIGHTHOUSE</text>
+    <text x="100" y="218" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">SCORE</text>
+    <rect x="70" y="226" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="70" y="226" width="0" height="3" rx="1.5" fill="#0891B2">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.63s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="134" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="280" y="182" font-size="24" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.64s" fill="freeze"/>30%</text>
+    <text x="280" y="204" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">USER</text>
+    <text x="280" y="218" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">ENGAGEMENT</text>
+    <rect x="250" y="226" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="250" y="226" width="0" height="3" rx="1.5" fill="#0369A1">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.74s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="134" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="460" y="182" font-size="24" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.75s" fill="freeze"/>800+</text>
+    <text x="460" y="204" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">CONCURRENT</text>
+    <text x="460" y="218" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">USERS</text>
+    <rect x="430" y="226" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="430" y="226" width="0" height="3" rx="1.5" fill="#2563EB">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.85s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="16" y="252" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="100" y="300" font-size="24" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.86s" fill="freeze"/>99.9%</text>
+    <text x="100" y="322" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">UPTIME</text>
+    
+    <rect x="70" y="344" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="70" y="344" width="0" height="3" rx="1.5" fill="#7C3AED">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="0.96s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="252" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="280" y="300" font-size="24" font-family="monospace" font-weight="bold" fill="#0891B2" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.97s" fill="freeze"/>500+</text>
+    <text x="280" y="322" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">INDIVIDUAL</text>
+    <text x="280" y="336" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">REGISTRATIONS</text>
+    <rect x="250" y="344" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="250" y="344" width="0" height="3" rx="1.5" fill="#0891B2">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.07s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="252" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="460" y="300" font-size="24" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.08s" fill="freeze"/>300+</text>
+    <text x="460" y="322" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">TEAM</text>
+    <text x="460" y="336" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">REGISTRATIONS</text>
+    <rect x="430" y="344" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="430" y="344" width="0" height="3" rx="1.5" fill="#0369A1">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.18s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="16" y="370" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="100" y="418" font-size="24" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.19s" fill="freeze"/>60%</text>
+    <text x="100" y="440" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">FEWER</text>
+    <text x="100" y="454" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">FAILURES</text>
+    <rect x="70" y="462" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="70" y="462" width="0" height="3" rx="1.5" fill="#2563EB">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.29s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="196" y="370" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="280" y="418" font-size="24" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.30s" fill="freeze"/>100%</text>
+    <text x="280" y="440" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">DATA</text>
+    <text x="280" y="454" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">INTEGRITY</text>
+    <rect x="250" y="462" width="60" height="3" rx="1.5" fill="#E2E8F0"/>
+    <rect x="250" y="462" width="0" height="3" rx="1.5" fill="#7C3AED">
+      <animate attributeName="width" from="0" to="60" dur="0.8s" fill="freeze" begin="1.40s"/>
+    </rect>
+  </g>
+  <g>
+    <rect x="376" y="370" width="168" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="460" y="416" font-size="13" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">BUILD.</text>
+    <text x="460" y="434" font-size="13" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle">OPTIMIZE.</text>
+    <text x="460" y="452" font-size="13" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle">SCALE.</text>
+  </g>
+
+</svg>
+</div>
+</div>
+<hr/>
+<!-- ================= TECH STACK ================= -->
 <h2>Tech Stack</h2>
 <div align="center">
 <h3>Languages</h3>
 <p><img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /> <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/C-%23A8B9CC.svg?style=flat-square&logo=c&logoColor=black" alt="C" /></p>
-<h3>Frameworks / Libraries</h3>
-<p><img src="https://img.shields.io/badge/React.js-%2361DAFB.svg?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/Express.js-%23000000.svg?style=flat-square&logo=express&logoColor=white" alt="Express" /> <img src="https://img.shields.io/badge/AngularJS-%23E23237.svg?style=flat-square&logo=angular&logoColor=white" alt="AngularJS" /> <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" /></p>
+<h3>Frontend / Mobile</h3>
+<p><img src="https://img.shields.io/badge/React.js-%2361DAFB.svg?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/AngularJS-%23E23237.svg?style=flat-square&logo=angular&logoColor=white" alt="AngularJS" /> <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" /></p>
+<h3>Backend</h3>
+<p><img src="https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/Express.js-%23000000.svg?style=flat-square&logo=express&logoColor=white" alt="Express" /></p>
 <h3>Databases</h3>
 <p><img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" /> <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" /> <img src="https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" /></p>
-<h3>DevOps & Tools</h3>
-<p><img src="https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git" /> <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub" /> <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white" alt="Docker" /> <img src="https://img.shields.io/badge/Power%20BI-%23F2C811.svg?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI" /> <img src="https://img.shields.io/badge/Power%20Apps-%2374276F.svg?style=flat-square&logo=powerapps&logoColor=white" alt="Power Apps" /> <img src="https://img.shields.io/badge/Power%20Automate-%230066FF.svg?style=flat-square&logo=powerautomate&logoColor=white" alt="Power Automate" /> <img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat-square&logo=figma&logoColor=white" alt="Figma" /></p>
-<h3>Core Competencies</h3>
-<svg viewBox="0 0 470 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Core competencies" width="500">
-  <defs>
-    <linearGradient id="compBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#0077FF"/>
-    </linearGradient>
-  </defs>
-  <rect x="2" y="2" width="466" height="152" rx="12" fill="#111827" stroke="#1E3A5F"/>
-  <text x="16" y="14" font-size="12" font-family="monospace" fill="#E6F1FF">Data Structures &amp; Algorithms</text>
-  <rect x="240" y="4" width="180" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="240" y="4" width="0" height="10" rx="5" fill="url(#compBar)">
-    <animate attributeName="width" from="0" to="162" dur="1.4s" fill="freeze" begin="0.2s"/>
-  </rect>
-  <text x="426" y="14" font-size="12" font-family="monospace" font-weight="bold" fill="#00D4FF"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.3s" fill="freeze"/>90%</text>
-  <text x="16" y="40" font-size="12" font-family="monospace" fill="#E6F1FF">System Design</text>
-  <rect x="240" y="30" width="180" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="240" y="30" width="0" height="10" rx="5" fill="url(#compBar)">
-    <animate attributeName="width" from="0" to="153" dur="1.4s" fill="freeze" begin="0.5s"/>
-  </rect>
-  <text x="426" y="40" font-size="12" font-family="monospace" font-weight="bold" fill="#22D3EE"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/>85%</text>
-  <text x="16" y="66" font-size="12" font-family="monospace" fill="#E6F1FF">REST APIs</text>
-  <rect x="240" y="56" width="180" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="240" y="56" width="0" height="10" rx="5" fill="url(#compBar)">
-    <animate attributeName="width" from="0" to="171" dur="1.4s" fill="freeze" begin="0.8s"/>
-  </rect>
-  <text x="426" y="66" font-size="12" font-family="monospace" font-weight="bold" fill="#8B5CF6"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.9s" fill="freeze"/>95%</text>
-  <text x="16" y="92" font-size="12" font-family="monospace" fill="#E6F1FF">Object-Oriented (OOP)</text>
-  <rect x="240" y="82" width="180" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="240" y="82" width="0" height="10" rx="5" fill="url(#compBar)">
-    <animate attributeName="width" from="0" to="165.6" dur="1.4s" fill="freeze" begin="1.1s"/>
-  </rect>
-  <text x="426" y="92" font-size="12" font-family="monospace" font-weight="bold" fill="#00D4FF"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.2s" fill="freeze"/>92%</text>
-  <text x="16" y="118" font-size="12" font-family="monospace" fill="#E6F1FF">DBMS</text>
-  <rect x="240" y="108" width="180" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="240" y="108" width="0" height="10" rx="5" fill="url(#compBar)">
-    <animate attributeName="width" from="0" to="158.4" dur="1.4s" fill="freeze" begin="1.4s"/>
-  </rect>
-  <text x="426" y="118" font-size="12" font-family="monospace" font-weight="bold" fill="#22D3EE"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.5s" fill="freeze"/>88%</text>
-  <text x="16" y="144" font-size="12" font-family="monospace" fill="#E6F1FF">Operating Systems</text>
-  <rect x="240" y="134" width="180" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="240" y="134" width="0" height="10" rx="5" fill="url(#compBar)">
-    <animate attributeName="width" from="0" to="153" dur="1.4s" fill="freeze" begin="1.7s"/>
-  </rect>
-  <text x="426" y="144" font-size="12" font-family="monospace" font-weight="bold" fill="#8B5CF6"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.8s" fill="freeze"/>85%</text>
-</svg>
-
+<h3>Cloud / DevOps</h3>
+<p><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazonwebservices&logoColor=black" alt="AWS" /> <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white" alt="Docker" /> <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git" /> <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></p>
+<h3>Productivity / Business Tools</h3>
+<p><img src="https://img.shields.io/badge/Power%20BI-%23F2C811.svg?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI" /> <img src="https://img.shields.io/badge/Power%20Apps-%2374276F.svg?style=flat-square&logo=powerapps&logoColor=white" alt="Power Apps" /> <img src="https://img.shields.io/badge/Power%20Automate-%230066FF.svg?style=flat-square&logo=powerautomate&logoColor=white" alt="Power Automate" /> <img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat-square&logo=figma&logoColor=white" alt="Figma" /></p>
 </div>
 <hr/>
+<!-- ================= ENGINEERING CAPABILITIES ================= -->
+<h2>Engineering Capabilities</h2>
+<div align="center">
+  <div class="theme-dark"><svg width="560" height="240" viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering capabilities">
+  <g>
+    <rect x="16" y="16" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="30" width="3" height="14" rx="1.5" fill="#00D4FF"/>
+    <text x="44" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Backend Engineering</text>
+  </g>
+  <g>
+    <rect x="288" y="16" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="30" width="3" height="14" rx="1.5" fill="#0077FF"/>
+    <text x="316" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">REST API Design</text>
+  </g>
+  <g>
+    <rect x="16" y="72" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="86" width="3" height="14" rx="1.5" fill="#8B5CF6"/>
+    <text x="44" y="99" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">System Design</text>
+  </g>
+  <g>
+    <rect x="288" y="72" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="86" width="3" height="14" rx="1.5" fill="#22D3EE"/>
+    <text x="316" y="99" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Database Design</text>
+  </g>
+  <g>
+    <rect x="16" y="128" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="142" width="3" height="14" rx="1.5" fill="#00D4FF"/>
+    <text x="44" y="155" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Performance Optimization</text>
+  </g>
+  <g>
+    <rect x="288" y="128" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="142" width="3" height="14" rx="1.5" fill="#0077FF"/>
+    <text x="316" y="155" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Full-Stack Development</text>
+  </g>
+  <g>
+    <rect x="16" y="184" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="30" y="198" width="3" height="14" rx="1.5" fill="#8B5CF6"/>
+    <text x="44" y="211" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Mobile Development</text>
+  </g>
+  <g>
+    <rect x="288" y="184" width="256" height="42" rx="9" fill="#161B22" stroke="#30363D"/>
+    <rect x="302" y="198" width="3" height="14" rx="1.5" fill="#22D3EE"/>
+    <text x="316" y="211" font-size="13" font-family="monospace" font-weight="bold" fill="#F0F6FC">Cloud & DevOps</text>
+  </g>
+
+</svg>
+</div><div class="theme-light"><svg width="560" height="240" viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering capabilities">
+  <g>
+    <rect x="16" y="16" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="30" y="30" width="3" height="14" rx="1.5" fill="#0369A1"/>
+    <text x="44" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">Backend Engineering</text>
+  </g>
+  <g>
+    <rect x="288" y="16" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="302" y="30" width="3" height="14" rx="1.5" fill="#2563EB"/>
+    <text x="316" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">REST API Design</text>
+  </g>
+  <g>
+    <rect x="16" y="72" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="30" y="86" width="3" height="14" rx="1.5" fill="#7C3AED"/>
+    <text x="44" y="99" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">System Design</text>
+  </g>
+  <g>
+    <rect x="288" y="72" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="302" y="86" width="3" height="14" rx="1.5" fill="#0891B2"/>
+    <text x="316" y="99" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">Database Design</text>
+  </g>
+  <g>
+    <rect x="16" y="128" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="30" y="142" width="3" height="14" rx="1.5" fill="#0369A1"/>
+    <text x="44" y="155" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">Performance Optimization</text>
+  </g>
+  <g>
+    <rect x="288" y="128" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="302" y="142" width="3" height="14" rx="1.5" fill="#2563EB"/>
+    <text x="316" y="155" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">Full-Stack Development</text>
+  </g>
+  <g>
+    <rect x="16" y="184" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="30" y="198" width="3" height="14" rx="1.5" fill="#7C3AED"/>
+    <text x="44" y="211" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">Mobile Development</text>
+  </g>
+  <g>
+    <rect x="288" y="184" width="256" height="42" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="302" y="198" width="3" height="14" rx="1.5" fill="#0891B2"/>
+    <text x="316" y="211" font-size="13" font-family="monospace" font-weight="bold" fill="#0F172A">Cloud & DevOps</text>
+  </g>
+
+</svg>
+</div>
+</div>
+<hr/>
+<!-- ================= TECHNOLOGIES ================= -->
 <h2>Technologies</h2>
 <div align="center">
-  <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technology orbit" width="420">
-  <rect x="4" y="4" width="392" height="312" rx="16" fill="#111827" stroke="#1E3A5F"/>
-  <circle cx="200" cy="160" r="140" fill="none" stroke="#00D4FF" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="6 6">
+  <div class="theme-dark"><svg width="420" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technology orbit">
+  <rect x="4" y="4" width="392" height="312" rx="16" fill="#161B22" stroke="#30363D"/>
+  <circle cx="200" cy="160" r="140" fill="none" stroke="#00D4FF" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 6">
     <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="40s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="0.4s" fill="freeze"/>
   </circle>
-  <circle cx="200" cy="160" r="95" fill="none" stroke="#8B5CF6" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="4 4">
+  <circle cx="200" cy="160" r="95" fill="none" stroke="#8B5CF6" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 4">
     <animateTransform attributeName="transform" type="rotate" from="360 200 160" to="0 200 160" dur="26s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="0.55s" fill="freeze"/>
   </circle>
-  <circle cx="200" cy="160" r="46" fill="#0A0F1C" stroke="#00D4FF" stroke-width="2.5">
-    <animate attributeName="r" values="44;50;44" dur="2.4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.25s" fill="freeze"/>
+  <circle cx="200" cy="160" r="46" fill="#0D1117" stroke="#00D4FF" stroke-width="2"/>
+  <circle cx="200" cy="160" r="46" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 277">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="4s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="200" cy="160" r="46" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-dasharray="16 273">
-    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.3s" fill="freeze"/>
-  </circle>
-  <circle cx="200" cy="160" r="46" fill="none" stroke="#00D4FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="16 273">
-    <animateTransform attributeName="transform" type="rotate" from="180 200 160" to="540 200 160" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.35s" fill="freeze"/>
-  </circle>
-  <text x="200" y="167" font-size="22" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.4s" fill="freeze"/>AS</text>
+  <text x="200" y="167" font-size="22" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle">AS</text>
   <g>
     <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="18s" repeatCount="indefinite"/>
     <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 200 20" to="-360 200 20" dur="18s" repeatCount="indefinite"/>
+      <rect x="182" y="2" width="36" height="36" rx="9" fill="#2496ED" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="200" y="26" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Do</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.9s" fill="freeze"/>
+    </g>
+    <g>
       <animateTransform attributeName="transform" type="rotate" from="0 60 160" to="-360 60 160" dur="18s" repeatCount="indefinite"/>
-      <rect x="42" y="142" width="36" height="36" rx="9" fill="#61DAFB" stroke="#0A0F1C" stroke-width="1.5"/>
+      <rect x="42" y="142" width="36" height="36" rx="9" fill="#61DAFB" stroke="#0D1117" stroke-width="1.5"/>
       <text x="60" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Re</text>
       <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.6s" fill="freeze"/>
     </g>
     <g>
       <animateTransform attributeName="transform" type="rotate" from="0 340 160" to="-360 340 160" dur="18s" repeatCount="indefinite"/>
-      <rect x="322" y="142" width="36" height="36" rx="9" fill="#02569B" stroke="#0A0F1C" stroke-width="1.5"/>
+      <rect x="322" y="142" width="36" height="36" rx="9" fill="#02569B" stroke="#0D1117" stroke-width="1.5"/>
       <text x="340" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Fl</text>
       <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.75s" fill="freeze"/>
     </g>
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="0 200 20" to="-360 200 20" dur="18s" repeatCount="indefinite"/>
-      <rect x="182" y="2" width="36" height="36" rx="9" fill="#2496ED" stroke="#0A0F1C" stroke-width="1.5"/>
-      <text x="200" y="26" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Do</text>
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.9s" fill="freeze"/>
-    </g>
-    <g>
       <animateTransform attributeName="transform" type="rotate" from="0 200 300" to="-360 200 300" dur="18s" repeatCount="indefinite"/>
-      <rect x="182" y="282" width="36" height="36" rx="9" fill="#336791" stroke="#0A0F1C" stroke-width="1.5"/>
+      <rect x="182" y="282" width="36" height="36" rx="9" fill="#336791" stroke="#0D1117" stroke-width="1.5"/>
       <text x="200" y="306" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Pg</text>
       <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.05s" fill="freeze"/>
     </g>
@@ -320,315 +573,232 @@
   <g>
     <animateTransform attributeName="transform" type="rotate" from="360 200 160" to="0 200 160" dur="12s" repeatCount="indefinite"/>
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="-360 105 160" to="0 105 160" dur="12s" repeatCount="indefinite"/>
-      <rect x="87" y="142" width="36" height="36" rx="9" fill="#339933" stroke="#0A0F1C" stroke-width="1.5"/>
-      <text x="105" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">No</text>
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 133 93" to="-360 133 93" dur="12s" repeatCount="indefinite"/>
+      <rect x="115" y="75" width="36" height="36" rx="9" fill="#3178C6" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="133" y="99" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Ts</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.65s" fill="freeze"/>
     </g>
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="-360 295 160" to="0 295 160" dur="12s" repeatCount="indefinite"/>
-      <rect x="277" y="142" width="36" height="36" rx="9" fill="#ffffff" stroke="#8BA3BF" stroke-width="1.5"/>
-      <text x="295" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Ex</text>
+      <animateTransform attributeName="transform" type="rotate" from="0 267 93" to="-360 267 93" dur="12s" repeatCount="indefinite"/>
+      <rect x="249" y="75" width="36" height="36" rx="9" fill="#ffffff" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="267" y="99" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Ex</text>
       <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.35s" fill="freeze"/>
     </g>
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="-360 200 65" to="0 200 65" dur="12s" repeatCount="indefinite"/>
-      <rect x="182" y="47" width="36" height="36" rx="9" fill="#47A248" stroke="#0A0F1C" stroke-width="1.5"/>
-      <text x="200" y="71" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Mo</text>
+      <animateTransform attributeName="transform" type="rotate" from="0 133 227" to="-360 133 227" dur="12s" repeatCount="indefinite"/>
+      <rect x="115" y="209" width="36" height="36" rx="9" fill="#47A248" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="133" y="233" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Mo</text>
       <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.5s" fill="freeze"/>
     </g>
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="-360 200 255" to="0 200 255" dur="12s" repeatCount="indefinite"/>
-      <rect x="182" y="237" width="36" height="36" rx="9" fill="#3178C6" stroke="#0A0F1C" stroke-width="1.5"/>
-      <text x="200" y="261" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Ts</text>
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.65s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 267 227" to="-360 267 227" dur="12s" repeatCount="indefinite"/>
+      <rect x="249" y="209" width="36" height="36" rx="9" fill="#339933" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="267" y="233" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">No</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" fill="freeze"/>
     </g>
   </g>
 </svg>
-
+</div><div class="theme-light"><svg width="420" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technology orbit">
+  <rect x="4" y="4" width="392" height="312" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="200" cy="160" r="140" fill="none" stroke="#0369A1" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 6">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="40s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="160" r="95" fill="none" stroke="#7C3AED" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 4">
+    <animateTransform attributeName="transform" type="rotate" from="360 200 160" to="0 200 160" dur="26s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="160" r="46" fill="#F8FAFC" stroke="#0369A1" stroke-width="2"/>
+  <circle cx="200" cy="160" r="46" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 277">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="200" y="167" font-size="22" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">AS</text>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="18s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 200 20" to="-360 200 20" dur="18s" repeatCount="indefinite"/>
+      <rect x="182" y="2" width="36" height="36" rx="9" fill="#2496ED" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="200" y="26" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Do</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.9s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 60 160" to="-360 60 160" dur="18s" repeatCount="indefinite"/>
+      <rect x="42" y="142" width="36" height="36" rx="9" fill="#61DAFB" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="60" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Re</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.6s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 340 160" to="-360 340 160" dur="18s" repeatCount="indefinite"/>
+      <rect x="322" y="142" width="36" height="36" rx="9" fill="#02569B" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="340" y="166" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Fl</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.75s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 200 300" to="-360 200 300" dur="18s" repeatCount="indefinite"/>
+      <rect x="182" y="282" width="36" height="36" rx="9" fill="#336791" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="200" y="306" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Pg</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.05s" fill="freeze"/>
+    </g>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="360 200 160" to="0 200 160" dur="12s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 133 93" to="-360 133 93" dur="12s" repeatCount="indefinite"/>
+      <rect x="115" y="75" width="36" height="36" rx="9" fill="#3178C6" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="133" y="99" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Ts</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.65s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 267 93" to="-360 267 93" dur="12s" repeatCount="indefinite"/>
+      <rect x="249" y="75" width="36" height="36" rx="9" fill="#ffffff" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="267" y="99" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0A0F1C" text-anchor="middle">Ex</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.35s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 133 227" to="-360 133 227" dur="12s" repeatCount="indefinite"/>
+      <rect x="115" y="209" width="36" height="36" rx="9" fill="#47A248" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="133" y="233" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Mo</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.5s" fill="freeze"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 267 227" to="-360 267 227" dur="12s" repeatCount="indefinite"/>
+      <rect x="249" y="209" width="36" height="36" rx="9" fill="#339933" stroke="#0D1117" stroke-width="1.5"/>
+      <text x="267" y="233" font-size="15" font-family="sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">No</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" fill="freeze"/>
+    </g>
+  </g>
+</svg>
+</div>
   <br/>
-  <sub><i>React · Node.js · Express.js · Flutter · MongoDB · Docker · PostgreSQL · TypeScript</i></sub>
+  <sub><i>React.js · Node.js · Express.js · Flutter · MongoDB · PostgreSQL · TypeScript · Docker</i></sub>
 </div>
 <hr/>
+<!-- ================= EXPERIENCE ================= -->
 <h2>Experience</h2>
 <details>
 <summary><b>Software Development Engineer — Helical Consulting</b> &nbsp;|&nbsp; <code>July 2026 – Present · Remote</code></summary>
 <br/>
-<ul><li><strong>Architected and delivered</strong> full-stack web applications at scale (React.js, Node.js, Flutter)</li><li><strong>Designed and implemented</strong> RESTful APIs — reduced response times through query optimization and caching</li><li><strong>Owned frontend performance</strong> — code splitting, lazy loading, and image optimization to hold 95+ Lighthouse scores</li><li><strong>Led a cross-functional team</strong> delivering mobile-first solutions, lifting user engagement by 30%</li></ul>
+<ul><li><strong>Architected and deployed 3 full-stack web applications</strong> serving 10K+ monthly active users using React.js, Node.js, and Flutter</li><li><strong>Designed and implemented 15+ RESTful APIs</strong>, reducing average response time by 40% through query optimization and caching strategies</li><li><strong>Optimized frontend performance</strong> achieving 95+ scores on Lighthouse through code splitting, lazy loading, and image optimization</li><li><strong>Led a cross-functional team of 5 engineers</strong> to deliver mobile-first solutions, resulting in 30% increase in user engagement</li></ul>
 </details>
 <details>
 <summary><b>Software Engineering Intern — Larsen & Toubro</b> &nbsp;|&nbsp; <code>Jul 2025 – Sep 2025 · Faridabad</code></summary>
 <br/>
-<ul><li><strong>Built PreBid Tracker</strong> serving 200+ internal users — reduced bid processing time by 50%</li><li><strong>Automated 15+ workflow processes</strong> with Power Automate, saving 20+ hours weekly</li><li><strong>Created PowerBI dashboards</strong> delivering real-time analytics to 50+ stakeholders</li><li><strong>Engineered Worker Monitoring System</strong> (YOLOv8 + MediaPipe) with 92% activity recognition accuracy</li></ul>
+<ul><li><strong>Developed PreBid Tracker</strong> serving 200+ internal users, streamlining tender management and reducing bid processing time by 50%</li><li><strong>Automated 15+ workflow processes</strong> using Power Automate, eliminating manual interventions and saving 20+ hours weekly</li><li><strong>Built interactive PowerBI dashboards</strong> providing real-time analytics to 50+ stakeholders, enabling data-driven decision making</li><li><strong>Built a Worker Monitoring System</strong> with systematized reporting, as a supporting engineering initiative within the internship scope</li></ul>
 </details>
 <hr/>
+<!-- ================= PROJECTS ================= -->
 <h2>Projects</h2>
 <h3>TECHVOYM — Technical Fest Registration Portal</h3>
-<pre><code class="language-text">Stack: Node.js • Express.js • MongoDB • HTML5 • CSS3 • JavaScript • Docker
-</code></pre>
-<blockquote>End-to-end registration platform architected for peak traffic — 800+ concurrent users sustained at 99.9% uptime.</blockquote>
-<table><thead><tr><th>Metric</th><th>Detail</th></tr></thead><tbody><tr><td>Scale</td><td><strong>800+</strong> concurrent users with <strong>99.9% uptime</strong> during peak traffic</td></tr><tr><td>Backend</td><td>Node.js + MongoDB → <strong>500+</strong> individual & <strong>300+</strong> team registrations</td></tr><tr><td>Reliability</td><td>Real-time validation & error handling → <strong>60% fewer</strong> registration failures</td></tr><tr><td>Monitoring</td><td>Computerized monitoring + alert system → <strong>100% data integrity</strong> over 72-hour window</td></tr></tbody></table>
 <div align="center">
-<sub><i>platform scale — bars grow on load</i></sub>
-<svg viewBox="0 0 540 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Platform scale metrics" width="560">
-  <defs>
-    <linearGradient id="pmBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-  </defs>
-  <rect x="6" y="6" width="528" height="184" rx="14" fill="#111827" stroke="#1E3A5F"/>
-  <text x="26" y="36" font-size="14" font-family="monospace" font-weight="bold" fill="#00D4FF">Platform Scale</text>
-  <text x="26" y="70" font-size="12" font-family="monospace" fill="#E6F1FF">Concurrent users</text>
-  <rect x="210" y="60" width="250" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="210" y="60" width="0" height="10" rx="5" fill="url(#pmBar)">
-    <animate attributeName="width" from="0" to="250" dur="1.2s" fill="freeze" begin="0.2s"/>
-  </rect>
-  <rect x="206" y="60" width="40" height="10" rx="5" fill="#E6F1FF" opacity="0.22">
-    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite"/>
-  </rect>
-  <text x="468" y="70" font-size="12" font-family="monospace" font-weight="bold" fill="#00D4FF">800+</text>
-  <text x="26" y="100" font-size="12" font-family="monospace" fill="#E6F1FF">Individual registrations</text>
-  <rect x="210" y="90" width="250" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="210" y="90" width="0" height="10" rx="5" fill="url(#pmBar)">
-    <animate attributeName="width" from="0" to="156" dur="1.2s" fill="freeze" begin="0.5s"/>
-  </rect>
-  <rect x="206" y="90" width="40" height="10" rx="5" fill="#E6F1FF" opacity="0.22">
-    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite" begin="0.3s"/>
-  </rect>
-  <text x="468" y="100" font-size="12" font-family="monospace" font-weight="bold" fill="#22D3EE">500+</text>
-  <text x="26" y="130" font-size="12" font-family="monospace" fill="#E6F1FF">Team registrations</text>
-  <rect x="210" y="120" width="250" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="210" y="120" width="0" height="10" rx="5" fill="url(#pmBar)">
-    <animate attributeName="width" from="0" to="94" dur="1.2s" fill="freeze" begin="0.8s"/>
-  </rect>
-  <rect x="206" y="120" width="40" height="10" rx="5" fill="#E6F1FF" opacity="0.22">
-    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite" begin="0.6s"/>
-  </rect>
-  <text x="468" y="130" font-size="12" font-family="monospace" font-weight="bold" fill="#8B5CF6">300+</text>
-  <text x="26" y="160" font-size="12" font-family="monospace" fill="#E6F1FF">Data integrity</text>
-  <rect x="210" y="150" width="250" height="10" rx="5" fill="#1E3A5F"/>
-  <rect x="210" y="150" width="0" height="10" rx="5" fill="url(#pmBar)">
-    <animate attributeName="width" from="0" to="250" dur="1.2s" fill="freeze" begin="1.1s"/>
-  </rect>
-  <rect x="206" y="150" width="40" height="10" rx="5" fill="#E6F1FF" opacity="0.22">
-    <animate attributeName="x" values="210;460" dur="2.6s" repeatCount="indefinite" begin="0.9s"/>
-  </rect>
-  <text x="468" y="160" font-size="12" font-family="monospace" font-weight="bold" fill="#00D4FF">100%</text>
-</svg>
-
+<p><img src="https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/Express.js-%23000000.svg?style=flat-square&logo=express&logoColor=white" alt="Express" /> <img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" /> <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /> <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white" alt="Docker" /></p>
 </div>
-<hr/>
-<h2>Key Metrics</h2>
+<p><strong>Problem</strong> — A technical fest needed an end-to-end registration platform that could handle peak traffic without failing: hundreds of concurrent users, individual and team signups, and zero tolerance for data loss across a 72-hour registration window.</p>
+<p><strong>Solution</strong> — Architected a full-stack platform with Node.js and Express.js backed by MongoDB, fronted with HTML5/CSS3/JavaScript, containerized with Docker, and hardened with real-time validation and error handling plus a computerized monitoring and alert system.</p>
+<p><strong>Architecture</strong> — Traffic → API → Validation → Database → Monitoring:</p>
 <div align="center">
-<sub><i>key outcomes, quantified — gauges fill on load</i></sub>
-<svg viewBox="0 0 450 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Key metrics" width="450">
-  <defs>
-    <linearGradient id="km1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#0077FF"/>
-    </linearGradient>
-    <linearGradient id="km2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0077FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <linearGradient id="km3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#00D4FF"/>
-    </linearGradient>
-    <linearGradient id="km4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <linearGradient id="km5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0077FF"/>
-      <stop offset="100%" stop-color="#00D4FF"/>
-    </linearGradient>
-    <linearGradient id="km6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#0077FF"/>
-    </linearGradient>
-  </defs>
-
-  <!-- row 1: card 1 -->
-  <g transform="translate(4 4)">
-    <rect x="0" y="0" width="142" height="157" rx="12" fill="#111827" stroke="#1E3A5F"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#1E3A5F" stroke-width="10"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="url(#km1)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 71 66)">
-      <animate attributeName="stroke-dashoffset" from="352" to="0" dur="1.8s" fill="freeze" begin="0.2s"/>
-    </circle>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#E6F1FF" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
-      <animateTransform attributeName="transform" type="rotate" from="-90 71 66" to="270 71 66" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <text x="71" y="62" font-size="19" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.3s" fill="freeze"/>99.9%</text>
-    <text x="71" y="82" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">UPTIME</text>
-    <text x="71" y="148" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">Peak traffic</text>
+  <div class="theme-dark"><svg width="560" height="170" viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TECHVOYM architecture and scale">
+  <g>
+    <rect x="18" y="58" width="92" height="56" rx="9" fill="#161B22" stroke="#30363D"/>
+    <text x="64" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle">TRAFFIC</text>
+    <text x="64" y="96" font-size="9" font-family="monospace" fill="#8B949E" text-anchor="middle">800+ concurrent</text>
   </g>
-  <!-- row 1: card 2 -->
-  <g transform="translate(154 4)">
-    <rect x="0" y="0" width="142" height="157" rx="12" fill="#111827" stroke="#1E3A5F"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#1E3A5F" stroke-width="10"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="url(#km2)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 71 66)">
-      <animate attributeName="stroke-dashoffset" from="352" to="140.8" dur="1.8s" fill="freeze" begin="0.5s"/>
-    </circle>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#E6F1FF" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
-      <animateTransform attributeName="transform" type="rotate" from="-90 71 66" to="270 71 66" dur="2.6s" repeatCount="indefinite"/>
-    </circle>
-    <text x="71" y="62" font-size="19" font-family="monospace" font-weight="bold" fill="#22D3EE" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/>60%</text>
-    <text x="71" y="82" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">FEWER FAILURES</text>
-    <text x="71" y="148" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">Real-time validation</text>
+  <path d="M113 86 L123 86" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M119 81 L123 86 L119 91" fill="none" stroke="#30363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="126" y="58" width="92" height="56" rx="9" fill="#161B22" stroke="#30363D"/>
+    <text x="172" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0077FF" text-anchor="middle">API</text>
+    <text x="172" y="96" font-size="9" font-family="monospace" fill="#8B949E" text-anchor="middle">REST · Node.js</text>
   </g>
-  <!-- row 1: card 3 -->
-  <g transform="translate(304 4)">
-    <rect x="0" y="0" width="142" height="157" rx="12" fill="#111827" stroke="#1E3A5F"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#1E3A5F" stroke-width="10"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="url(#km3)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 71 66)">
-      <animate attributeName="stroke-dashoffset" from="352" to="17.6" dur="1.8s" fill="freeze" begin="0.8s"/>
-    </circle>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#E6F1FF" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
-      <animateTransform attributeName="transform" type="rotate" from="-90 71 66" to="270 71 66" dur="3.4s" repeatCount="indefinite"/>
-    </circle>
-    <text x="71" y="62" font-size="19" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.9s" fill="freeze"/>95+</text>
-    <text x="71" y="82" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">LIGHTHOUSE</text>
-    <text x="71" y="148" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">Frontend perf</text>
+  <path d="M221 86 L231 86" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M227 81 L231 86 L227 91" fill="none" stroke="#30363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="234" y="58" width="92" height="56" rx="9" fill="#161B22" stroke="#30363D"/>
+    <text x="280" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#22D3EE" text-anchor="middle">VALIDATION</text>
+    <text x="280" y="96" font-size="9" font-family="monospace" fill="#8B949E" text-anchor="middle">60% fewer failures</text>
   </g>
-
-  <!-- row 2: card 4 -->
-  <g transform="translate(4 179)">
-    <rect x="0" y="0" width="142" height="157" rx="12" fill="#111827" stroke="#1E3A5F"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#1E3A5F" stroke-width="10"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="url(#km4)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 71 66)">
-      <animate attributeName="stroke-dashoffset" from="352" to="246.4" dur="1.8s" fill="freeze" begin="1.1s"/>
-    </circle>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#E6F1FF" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
-      <animateTransform attributeName="transform" type="rotate" from="-90 71 66" to="270 71 66" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-    <text x="71" y="62" font-size="19" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.2s" fill="freeze"/>30%</text>
-    <text x="71" y="82" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">ENGAGEMENT</text>
-    <text x="71" y="148" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">Mobile-first UX</text>
+  <path d="M329 86 L339 86" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M335 81 L339 86 L335 91" fill="none" stroke="#30363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="342" y="58" width="92" height="56" rx="9" fill="#161B22" stroke="#30363D"/>
+    <text x="388" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle">DATABASE</text>
+    <text x="388" y="96" font-size="9" font-family="monospace" fill="#8B949E" text-anchor="middle">500+ · 300+ regs</text>
   </g>
-  <!-- row 2: card 5 -->
-  <g transform="translate(154 179)">
-    <rect x="0" y="0" width="142" height="157" rx="12" fill="#111827" stroke="#1E3A5F"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#1E3A5F" stroke-width="10"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="url(#km5)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 71 66)">
-      <animate attributeName="stroke-dashoffset" from="352" to="28.16" dur="1.8s" fill="freeze" begin="1.4s"/>
-    </circle>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#E6F1FF" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
-      <animateTransform attributeName="transform" type="rotate" from="-90 71 66" to="270 71 66" dur="3.2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="71" y="62" font-size="19" font-family="monospace" font-weight="bold" fill="#22D3EE" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.5s" fill="freeze"/>92%</text>
-    <text x="71" y="82" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">AI ACCURACY</text>
-    <text x="71" y="148" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">YOLOv8 + MediaPipe</text>
+  <path d="M437 86 L447 86" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M443 81 L447 86 L443 91" fill="none" stroke="#30363D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="450" y="58" width="92" height="56" rx="9" fill="#161B22" stroke="#30363D"/>
+    <text x="496" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle">MONITORING</text>
+    <text x="496" y="96" font-size="9" font-family="monospace" fill="#8B949E" text-anchor="middle">100% integrity</text>
   </g>
-  <!-- row 2: card 6 -->
-  <g transform="translate(304 179)">
-    <rect x="0" y="0" width="142" height="157" rx="12" fill="#111827" stroke="#1E3A5F"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#1E3A5F" stroke-width="10"/>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="url(#km6)" stroke-width="10" stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352" transform="rotate(-90 71 66)">
-      <animate attributeName="stroke-dashoffset" from="352" to="176" dur="1.8s" fill="freeze" begin="1.7s"/>
-    </circle>
-    <circle cx="71" cy="66" r="56" fill="none" stroke="#E6F1FF" stroke-opacity="0.3" stroke-width="10" stroke-linecap="round" stroke-dasharray="36 316">
-      <animateTransform attributeName="transform" type="rotate" from="-90 71 66" to="270 71 66" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    <text x="71" y="62" font-size="19" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.8s" fill="freeze"/>50%</text>
-    <text x="71" y="82" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">FASTER BIDS</text>
-    <text x="71" y="148" font-size="10" font-family="monospace" fill="#8BA3BF" text-anchor="middle">PreBid Tracker</text>
-  </g>
+  <text x="280" y="140" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>
+  <text x="280" y="156" font-size="10" font-family="monospace" fill="#8B949E" text-anchor="middle">99.9% uptime · 72-hour registration window</text>
 </svg>
-
+</div><div class="theme-light"><svg width="560" height="170" viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TECHVOYM architecture and scale">
+  <g>
+    <rect x="18" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="64" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">TRAFFIC</text>
+    <text x="64" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">800+ concurrent</text>
+  </g>
+  <path d="M113 86 L123 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M119 81 L123 86 L119 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="126" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="172" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle">API</text>
+    <text x="172" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">REST · Node.js</text>
+  </g>
+  <path d="M221 86 L231 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M227 81 L231 86 L227 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="234" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="280" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0891B2" text-anchor="middle">VALIDATION</text>
+    <text x="280" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">60% fewer failures</text>
+  </g>
+  <path d="M329 86 L339 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M335 81 L339 86 L335 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="342" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="388" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle">DATABASE</text>
+    <text x="388" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">500+ · 300+ regs</text>
+  </g>
+  <path d="M437 86 L447 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M443 81 L447 86 L443 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="450" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="496" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">MONITORING</text>
+    <text x="496" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">100% integrity</text>
+  </g>
+  <text x="280" y="140" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>
+  <text x="280" y="156" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">99.9% uptime · 72-hour registration window</text>
+</svg>
 </div>
+</div>
+<p><strong>Scale & Impact</strong></p>
+<table><thead><tr><th>Metric</th><th>Detail</th></tr></thead><tbody><tr><td>Scale</td><td><strong>800+</strong> concurrent users sustained at <strong>99.9%</strong> uptime</td></tr><tr><td>Registrations</td><td><strong>500+</strong> individual and <strong>300+</strong> team registrations</td></tr><tr><td>Reliability</td><td><strong>60% fewer</strong> registration failures via real-time validation</td></tr><tr><td>Integrity</td><td><strong>100%</strong> data integrity across the 72-hour window</td></tr></tbody></table>
 <hr/>
+<!-- ================= EDUCATION ================= -->
 <h2>Education</h2>
+<div align="center">
 <h3>SRMS College of Engineering Technology & Research</h3>
-<p><strong>B.Tech in Computer Science & Engineering</strong> — CGPA: <code>7.29/10</code> | <em>Expected May 2026</em> | Bareilly, UP, India</p>
-<ul><li><strong>Coursework:</strong> Data Structures & Algorithms · Operating Systems · DBMS · Computer Networks · Software Engineering</li><li><strong>Smart India Hackathon 2025</strong> — Participant</li><li><strong>United Group of Institutions Hackathon 2024</strong> — 2nd Place</li></ul>
+<p><strong>B.Tech in Computer Science & Engineering</strong> — CGPA: <code>7.29/10</code> · <em>Expected May 2026</em> · Bareilly, UP, India</p>
+<p><strong>Coursework:</strong> Data Structures & Algorithms · Operating Systems · Database Management Systems · Computer Networks · Software Engineering</p>
+</div>
+<hr/>
+<!-- ================= ACHIEVEMENTS ================= -->
+<h2>Achievements</h2>
+<div align="center">
+<table><thead><tr><th>Achievement</th><th>Result</th></tr></thead><tbody><tr><td><strong>Smart India Hackathon 2025</strong></td><td>Participant</td></tr><tr><td><strong>United Group of Institutions Hackathon 2024</strong></td><td>2nd Place</td></tr></tbody></table>
+</div>
+<hr/>
+<!-- ================= GITHUB ACTIVITY ================= -->
+<h2>GitHub Activity</h2>
+<div align="center">
+<p><img src="https://img.shields.io/github/followers/Saxena-Ashu?style=flat&logo=github&labelColor=0D1117&color=00D4FF" alt="GitHub Followers" /> <img src="https://img.shields.io/github/stars/Saxena-Ashu?style=flat&logo=github&labelColor=0D1117&color=0077FF" alt="GitHub Stars" /> <img src="https://img.shields.io/github/repos/Saxena-Ashu?style=flat&logo=github&labelColor=0D1117&color=8B5CF6" alt="Repositories" /></p>
 <br/>
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1100&color=0077FF&center=true&vCenter=true&width=760&lines=Smart+India+Hackathon+2025+%7C+Participant;United+Group+Hackathon+2024+%7C+2nd+Place;CGPA+7.29%2F10+%7C+B.Tech+CSE+%40+SRMS+College" alt="Achievements typing SVG" />
-</div>
-<hr/>
-<h2>Engineering Principles</h2>
-<ul><li><strong>Scale-first design</strong> — systems built for scale from day one</li><li><strong>Measure everything</strong> — 95+ Lighthouse, 99.9% uptime, measurable wins</li><li><strong>Ship iteratively</strong> — real-time validation cut registration failures by 60%</li><li><strong>Lead by building</strong> — cross-functional teams, mobile-first delivery, engagement +30%</li></ul>
-<div align="center">
-  <svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering principles" width="520">
-  <defs>
-    <linearGradient id="prBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-  </defs>
-  <rect x="4" y="4" width="512" height="232" rx="14" fill="#111827" stroke="#1E3A5F"/>
-  <text x="24" y="30" font-size="13" font-family="monospace" font-weight="bold" fill="#00D4FF">ENGINEERING PRINCIPLES</text>
-
-  <!-- principle 1 -->
-  <rect x="24" y="48" width="26" height="20" rx="5" fill="#00D4FF" opacity="0.15"/>
-  <text x="37" y="63" font-size="11" font-family="monospace" font-weight="bold" fill="#00D4FF" text-anchor="middle">01</text>
-  <text x="62" y="63" font-size="13" font-family="monospace" font-weight="bold" fill="#E6F1FF">Scale-first design</text>
-  <text x="62" y="80" font-size="11" font-family="monospace" fill="#8BA3BF">systems built for scale from day one</text>
-  <rect x="330" y="52" width="150" height="9" rx="4.5" fill="#1E3A5F"/>
-  <rect x="330" y="52" width="0" height="9" rx="4.5" fill="url(#prBar)">
-    <animate attributeName="width" from="0" to="142" dur="1.3s" fill="freeze" begin="0.2s"/>
-  </rect>
-  <rect x="328" y="52" width="26" height="9" rx="4.5" fill="#E6F1FF" opacity="0.2">
-    <animate attributeName="x" values="330;480" dur="2.4s" repeatCount="indefinite" begin="0.2s"/>
-  </rect>
-
-  <!-- principle 2 -->
-  <rect x="24" y="96" width="26" height="20" rx="5" fill="#22D3EE" opacity="0.15"/>
-  <text x="37" y="111" font-size="11" font-family="monospace" font-weight="bold" fill="#22D3EE" text-anchor="middle">02</text>
-  <text x="62" y="111" font-size="13" font-family="monospace" font-weight="bold" fill="#E6F1FF">Measure everything</text>
-  <text x="62" y="128" font-size="11" font-family="monospace" fill="#8BA3BF">95+ Lighthouse · 99.9% uptime · measurable wins</text>
-  <rect x="330" y="100" width="150" height="9" rx="4.5" fill="#1E3A5F"/>
-  <rect x="330" y="100" width="0" height="9" rx="4.5" fill="url(#prBar)">
-    <animate attributeName="width" from="0" to="138" dur="1.3s" fill="freeze" begin="0.5s"/>
-  </rect>
-  <rect x="328" y="100" width="26" height="9" rx="4.5" fill="#E6F1FF" opacity="0.2">
-    <animate attributeName="x" values="330;480" dur="2.4s" repeatCount="indefinite" begin="0.5s"/>
-  </rect>
-
-  <!-- principle 3 -->
-  <rect x="24" y="144" width="26" height="20" rx="5" fill="#8B5CF6" opacity="0.15"/>
-  <text x="37" y="159" font-size="11" font-family="monospace" font-weight="bold" fill="#8B5CF6" text-anchor="middle">03</text>
-  <text x="62" y="159" font-size="13" font-family="monospace" font-weight="bold" fill="#E6F1FF">Ship iteratively</text>
-  <text x="62" y="176" font-size="11" font-family="monospace" fill="#8BA3BF">real-time validation — 60% fewer registration failures</text>
-  <rect x="330" y="148" width="150" height="9" rx="4.5" fill="#1E3A5F"/>
-  <rect x="330" y="148" width="0" height="9" rx="4.5" fill="url(#prBar)">
-    <animate attributeName="width" from="0" to="90" dur="1.3s" fill="freeze" begin="0.8s"/>
-  </rect>
-  <rect x="328" y="148" width="26" height="9" rx="4.5" fill="#E6F1FF" opacity="0.2">
-    <animate attributeName="x" values="330;480" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
-  </rect>
-
-  <!-- principle 4 -->
-  <rect x="24" y="192" width="26" height="20" rx="5" fill="#0077FF" opacity="0.15"/>
-  <text x="37" y="207" font-size="11" font-family="monospace" font-weight="bold" fill="#0077FF" text-anchor="middle">04</text>
-  <text x="62" y="207" font-size="13" font-family="monospace" font-weight="bold" fill="#E6F1FF">Lead by building</text>
-  <text x="62" y="224" font-size="11" font-family="monospace" fill="#8BA3BF">cross-functional teams · mobile-first · engagement +30%</text>
-  <rect x="330" y="196" width="150" height="9" rx="4.5" fill="#1E3A5F"/>
-  <rect x="330" y="196" width="0" height="9" rx="4.5" fill="url(#prBar)">
-    <animate attributeName="width" from="0" to="146" dur="1.3s" fill="freeze" begin="1.1s"/>
-  </rect>
-  <rect x="328" y="196" width="26" height="9" rx="4.5" fill="#E6F1FF" opacity="0.2">
-    <animate attributeName="x" values="330;480" dur="2.4s" repeatCount="indefinite" begin="1.1s"/>
-  </rect>
-</svg>
-
-</div>
-<hr/>
-<h2>GitHub Stats</h2>
-<div align="center">
-<p><img src="https://img.shields.io/github/followers/Saxena-Ashu?style=for-the-badge&logo=github&labelColor=0A0F1C&color=00D4FF" alt="GitHub Followers" /> <img src="https://img.shields.io/github/stars/Saxena-Ashu?style=for-the-badge&logo=github&labelColor=0A0F1C&color=0077FF" alt="GitHub Stars" /> <img src="https://img.shields.io/github/repos/Saxena-Ashu?style=for-the-badge&logo=github&labelColor=0A0F1C&color=8B5CF6" alt="Repositories" /></p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0D1117&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=300" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-light&bg_color=F8FAFC&color=0369A1&line=2563EB&point=7C3AED&area=true&hide_border=true&radius=16&height=300" />
+  <img alt="Contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0D1117&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=300" width="95%" />
+</picture>
 <br/>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Saxena-Ashu&theme=github-dark&bg_color=0A0F1C&color=00D4FF&line=0077FF&point=8B5CF6&area=true&hide_border=true&radius=16&height=340" width="95%" />
-<!-- The github-readme-stats cards were removed while that service is down (HTTP 503). Restore them here once it recovers. -->
-</div>
-<hr/>
-<h2>Contribution Activity</h2>
-<!--
-<p>The snake below renders instantly from snake.svg (upload that file to the repo root). It becomes auto-updating if you also run the workflow once: Actions → "Generate Snake" → Run workflow → creates the "output" branch. --></p>
-<div align="center">
-  <svg width="718" height="120" viewBox="0 0 718 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub contribution snake for Saxena-Ashu">
+<svg width="718" height="120" viewBox="0 0 718 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub contribution snake for Saxena-Ashu">
   <defs>
     <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00D4FF"/>
@@ -646,11 +816,14 @@
   </path>
 </svg>
 
+<!-- The snake is generated by .github/workflows/snake.yml (daily at midnight
+<p>UTC, or manually: Actions → "Generate Snake" → Run workflow). Until the "output" branch exists, the fallback ./snake.svg at the repo root renders. The github-readme-stats cards are disabled while that service is down (503). --></p>
 </div>
 <hr/>
+<!-- ================= PING PONG ================= -->
 <h2>Ping Pong</h2>
 <div align="center">
-<div align="center">
+  <div align="center">
 <div style="max-width:560px;margin:0 auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">
   <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;font-weight:bold;color:#00E676;">
     <span id="pong-score">YOU 0 — 0 AI</span>
@@ -803,70 +976,31 @@
 })();
 </script>
 
-<sub><i>auto-rally — no input needed</i></sub>
+  <br/>
+  <a href="https://saxena-ashu.github.io/Saxena-Ashu/ping-pong/">
+    <img src="https://img.shields.io/badge/Play%20Ping%20Pong-00D4FF?style=for-the-badge&labelColor=0D1117&logoColor=white" alt="Play Ping Pong" />
+  </a>
+  <br/>
+  <sub><i>manual game — W/S or ↑/↓ · first to 7 · player vs computer</i></sub>
 </div>
+<!-- The game is a real page in this repo: ping-pong/ (index.html, style.css,
+<p>game.js). To make the PLAY button work, enable GitHub Pages on Saxena-Ashu/Saxena-Ashu → Settings → Pages → Deploy from branch → main / (root). --></p>
 <hr/>
+<!-- ================= CONTACT ================= -->
+<h2>Contact</h2>
 <div align="center">
-  <svg height="4" viewBox="0 0 100 4" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="divider" width="100%">
-  <defs>
-    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="50%" stop-color="#0077FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="4" fill="url(#divGrad)"/>
-  <rect width="18" height="4" fill="#E6F1FF" opacity="0.6">
-    <animate attributeName="x" values="-18;100" dur="3.5s" repeatCount="indefinite"/>
-  </rect>
-</svg>
-
-</div>
-<div align="center">
-<svg height="250" viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact" width="560">
-  <defs>
-    <linearGradient id="footEcg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <linearGradient id="footMotto" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00D4FF">
-        <animate attributeName="stop-color" values="#00D4FF;#8B5CF6;#0077FF;#00D4FF" dur="5s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#0077FF">
-        <animate attributeName="stop-color" values="#0077FF;#00D4FF;#8B5CF6;#0077FF" dur="5s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
-  </defs>
-
-  <rect x="10" y="10" width="540" height="150" rx="14" fill="#111827" stroke="#1E3A5F"/>
-  <circle cx="34" cy="38" r="5" fill="#00D4FF">
-    <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
-  </circle>
-  <text x="48" y="43" font-size="13" font-family="monospace" font-weight="bold" fill="#00D4FF">CONTACT</text>
-  <text x="530" y="43" font-size="11" font-family="monospace" fill="#8BA3BF" text-anchor="end">open to Senior SDE / Full-Stack roles</text>
-  <text x="34" y="74" font-size="12" font-family="monospace" fill="#8BA3BF">Mail&nbsp;&nbsp;:</text>
-  <text x="130" y="74" font-size="12" font-family="monospace" fill="#E6F1FF">ashusaxena4767@gmail.com</text>
-  <text x="34" y="96" font-size="12" font-family="monospace" fill="#8BA3BF">Phone :</text>
-  <text x="130" y="96" font-size="12" font-family="monospace" fill="#E6F1FF">+91 8439364075</text>
-  <text x="34" y="118" font-size="12" font-family="monospace" fill="#8BA3BF">City&nbsp;&nbsp;:</text>
-  <text x="130" y="118" font-size="12" font-family="monospace" fill="#E6F1FF">Bareilly, UP, India</text>
-  <text x="34" y="140" font-size="12" font-family="monospace" fill="#8BA3BF">Open&nbsp;&nbsp;:</text>
-  <text x="130" y="140" font-size="12" font-family="monospace" fill="#22D3EE">Senior SDE / Full-Stack roles</text>
-
-  <g stroke="url(#footEcg)" stroke-width="2.5" fill="none">
-    <g>
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-280 0" dur="3s" repeatCount="indefinite"/>
-      <path d="M0 195 H100 L110 195 L118 172 L126 218 L134 195 H280"/>
-      <path d="M280 195 H380 L390 195 L398 172 L406 218 L414 195 H560"/>
-    </g>
-  </g>
-
-  <text x="280" y="238" font-family="monospace" font-size="17" font-weight="bold" fill="url(#footMotto)" text-anchor="middle">Build. Optimize. Scale.</text>
-</svg>
-
-<br/>
+<pre><code class="language-text">┌─────────────────────────────────────────────┐
+│  Mail  : ashusaxena4767@gmail.com           │
+│  Phone : +91 8439364075                     │
+│  City  : Bareilly, UP, India                │
+│  Open  : Software Engineering roles         │
+└─────────────────────────────────────────────┘
+</code></pre>
 <p><img src="https://komarev.com/ghpvc/?username=Saxena-Ashu&color=00D4FF&style=flat-square&label=Profile+Views" alt="Profile Views" /></p>
+</div>
+<!-- ================= FOOTER ================= -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4FF,25:22D3EE,50:0077FF,75:8B5CF6,100:00D4FF&height=120&section=footer" width="100%" />
 </div>
 </main>
 </body>

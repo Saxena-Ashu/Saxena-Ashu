@@ -1,5 +1,6 @@
-// Renders README.md into a standalone preview.html (cyberpunk theme) so the
-// profile can be watched live in the Freebuff Preview tab.
+// Renders README.md into a standalone preview.html with full dark/light theme
+// support (CSS variables + prefers-color-scheme), so the profile can be
+// watched live in the Freebuff Preview tab.
 // Run: node .freebuff/build-preview.js
 const fs = require('fs');
 const path = require('path');
@@ -22,16 +23,7 @@ function inline(s) {
 }
 
 function renderCode(lang, buf) {
-  let body = buf.join('\n');
-  if (lang === 'diff') {
-    body = body.split('\n').map((l) => {
-      if (l.startsWith('+')) return `<span style="color:#00D4FF">${esc(l)}</span>`;
-      if (l.startsWith('-')) return `<span style="color:#8B5CF6">${esc(l)}</span>`;
-      return esc(l);
-    }).join('\n');
-  } else {
-    body = esc(body);
-  }
+  const body = esc(buf.join('\n'));
   return `<pre><code class="language-${esc(lang) || 'text'}">${body}\n</code></pre>`;
 }
 
@@ -67,7 +59,7 @@ while (i < lines.length) {
     continue;
   }
   if (t === '') { i++; continue; }
-  if (/^</.test(t)) { out.push(line); i++; continue; }        // raw HTML passthrough (div/img/table/details/comments)
+  if (/^</.test(t)) { out.push(line); i++; continue; }        // raw HTML passthrough (div/picture/img/table/details/comments)
   if (/^---+$/.test(t)) { out.push('<hr/>'); i++; continue; }
 
   const h = t.match(/^(#{1,6})\s+(.*)$/);
@@ -115,30 +107,48 @@ while (i < lines.length) {
   out.push(`<p>${inline(para.join(' '))}</p>`);
 }
 
+// Dual-theme CSS: variables flip with prefers-color-scheme, and custom asset
+// SVGs are inlined twice (dark + light) with .theme-dark/.theme-light classes.
 const css = `
-  body { margin: 0; background: #0A0F1C; color: #E6F1FF;
+  :root {
+    --bg: #0D1117; --fg: #F0F6FC; --muted: #8B949E;
+    --card: #111827; --border: #30363D; --accent: #00D4FF; --accent2: #0077FF;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #F8FAFC; --fg: #0F172A; --muted: #475569;
+      --card: #FFFFFF; --border: #CBD5E1; --accent: #0369A1; --accent2: #2563EB;
+    }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-         -webkit-font-smoothing: antialiased; }
+         -webkit-font-smoothing: antialiased; transition: background .2s, color .2s; }
   main { max-width: 960px; margin: 0 auto; padding: 24px 16px 72px; }
   h2 { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-       color: #00D4FF; border-bottom: 1px solid #1E3A5F; padding-bottom: .3em; margin-top: 2em; }
-  h3 { color: #22D3EE; }
-  pre { background: #111827; border: 1px solid #1E3A5F; border-radius: 6px; padding: 14px 16px; overflow-x: auto; }
+       color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: .3em; margin-top: 2em; }
+  h3 { color: var(--accent2); }
+  pre { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; overflow-x: auto; }
   code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-         font-size: 13px; background: rgba(139,163,191,.15); border-radius: 4px; padding: 1px 4px; }
+         font-size: 13px; background: rgba(110,118,129,.2); border-radius: 4px; padding: 1px 4px; }
   pre code { background: none; padding: 0; }
   table { border-collapse: collapse; width: 100%; margin: 10px 0; }
-  th, td { border: 1px solid #1E3A5F; padding: 8px 12px; text-align: left; }
-  th { background: #111827; color: #00D4FF; }
-  a { color: #00D4FF; }
+  th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+  th { background: var(--card); color: var(--accent); }
+  a { color: var(--accent); }
   img { max-width: 100%; }
-  details { border: 1px solid #1E3A5F; border-radius: 6px; padding: 8px 12px; background: #111827; margin: 10px 0; }
+  details { border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; background: var(--card); margin: 10px 0; }
   summary { cursor: pointer; }
-  blockquote { border-left: 4px solid #1E3A5F; padding-left: 12px; color: #8BA3BF; margin: 10px 0; }
-  hr { border: 0; border-top: 1px solid #1E3A5F; margin: 24px 0; }
+  blockquote { border-left: 4px solid var(--border); padding-left: 12px; color: var(--muted); margin: 10px 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
   p { line-height: 1.5; }
   ul { padding-left: 1.6em; }
   li { margin: 4px 0; line-height: 1.5; }
+  .theme-dark { display: block; }
+  .theme-light { display: none; }
+  @media (prefers-color-scheme: light) {
+    .theme-dark { display: none; }
+    .theme-light { display: block; }
+  }
 `;
 
 let html = `<!DOCTYPE html>
@@ -157,33 +167,34 @@ ${out.join('\n')}
 </html>
 `;
 
-// Preview-only: swap the README's auto-rally ping pong asset for the
-// interactive game from pong-game.html (playable with mouse/keys, scores to 7,
-// captures the max score in localStorage).
-try {
-  const pong = fs.readFileSync(path.join(__dirname, 'pong-game.html'), 'utf8');
-  html = html.replace(/<img src="\.\/assets\/ping-pong\.svg"[^>]*>/, pong);
-} catch {}
-// Preview-only: swap the snake <picture> for the locally generated animated
-// SVG so the snake is visible even before the user uploads snake.svg to
-// GitHub. Run .freebuff/build-snake.js first to (re)generate it.
-try {
-  const snakeSvg = fs.readFileSync(path.join(__dirname, 'snake.svg'), 'utf8');
-  html = html.replace(/<picture>[\s\S]*?<\/picture>/, snakeSvg);
-} catch {}
-// Inline every remaining ./assets/*.svg reference so the static preview page
-// renders them (the preview server only serves the single HTML file). The
-// SVG's own width attribute is kept; if the img tag carried a width, use it.
-html = html.replace(/<img src="\.\/assets\/([\w-]+\.svg)"([^>]*)>/g, (m, name, attrs) => {
-  try {
-    let svg = fs.readFileSync(path.join(root, 'assets', name), 'utf8');
-    const w = (attrs.match(/width="([^"]+)"/) || [])[1];
-    if (w) svg = svg.replace(/<svg([^>]*)>/, (mm, rest) => {
-      rest = rest.replace(/\s+width="[^"]*"/, '');
-      return `<svg${rest} width="${w}">`;
-    });
-    return svg;
-  } catch { return m; }
+// Preview-only swaps + asset inlining, processed picture-block by picture-block
+// so no regex can swallow content across blocks.
+let pong = null, snakeSvg = null;
+try { pong = fs.readFileSync(path.join(__dirname, 'pong-game.html'), 'utf8'); } catch {}
+try { snakeSvg = fs.readFileSync(path.join(__dirname, 'snake.svg'), 'utf8'); } catch {}
+
+html = html.replace(/<picture>([\s\S]*?)<\/picture>/g, (m, inner) => {
+  // 1) Preview-only: the snake picture becomes the local animated snake.
+  if (snakeSvg && /github-contribution-grid-snake/.test(inner)) return snakeSvg;
+  // 2) Preview-only: the ping-pong picture becomes the interactive game.
+  if (pong && /ping-pong-(?:dark|light)\.svg/.test(inner)) return pong;
+  // 3) Local asset pair -> two inlined SVGs toggled by prefers-color-scheme.
+  const darkMatch = inner.match(/srcset="\.\/assets\/([\w-]+-dark\.svg)"/);
+  const lightMatch = inner.match(/srcset="\.\/assets\/([\w-]+-light\.svg)"/);
+  if (darkMatch || lightMatch) {
+    let parts = '';
+    if (darkMatch) {
+      try { parts += `<div class="theme-dark">${fs.readFileSync(path.join(root, 'assets', darkMatch[1]), 'utf8')}</div>`; }
+      catch { return m; }
+    }
+    if (lightMatch) {
+      try { parts += `<div class="theme-light">${fs.readFileSync(path.join(root, 'assets', lightMatch[1]), 'utf8')}</div>`; }
+      catch { return m; }
+    }
+    return parts;
+  }
+  // 4) External picture (typing svg, activity graph) — keep as-is.
+  return m;
 });
 // Fallback: rewrite any remaining raw snake URL to the local copy.
 html = html.replaceAll(

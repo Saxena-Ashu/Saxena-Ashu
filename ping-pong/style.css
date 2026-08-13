@@ -1,0 +1,143 @@
+/* Ping Pong — matches the profile's cyberpunk / light theme. */
+
+:root {
+  --bg: #0D1117;
+  --card: #111827;
+  --border: #30363D;
+  --track: #21262D;
+  --text: #F0F6FC;
+  --muted: #8B949E;
+  --primary: #00D4FF;
+  --secondary: #0077FF;
+  --accent: #8B5CF6;
+  --highlight: #22D3EE;
+  --glow: rgba(0, 212, 255, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #F8FAFC;
+    --card: #FFFFFF;
+    --border: #CBD5E1;
+    --track: #E2E8F0;
+    --text: #0F172A;
+    --muted: #475569;
+    --primary: #0369A1;
+    --secondary: #2563EB;
+    --accent: #7C3AED;
+    --highlight: #0891B2;
+    --glow: rgba(3, 105, 161, 0.25);
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.shell {
+  width: 100%;
+  max-width: 940px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px 22px;
+  text-align: center;
+  box-shadow: 0 0 40px var(--glow);
+}
+
+.title {
+  font-size: 26px;
+  letter-spacing: 6px;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.side { display: flex; flex-direction: column; align-items: center; min-width: 72px; }
+.side-name { font-size: 12px; color: var(--muted); letter-spacing: 2px; }
+.score { font-size: 34px; font-weight: bold; color: var(--text); }
+.vs { font-size: 15px; color: var(--muted); }
+
+.canvas-wrap {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--track);
+  margin-bottom: 16px;
+}
+
+#court { display: block; width: 100%; height: auto; }
+
+.controls { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+
+.btn {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease, color 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border: none;
+  color: #0A0F1C;
+}
+.btn-primary:hover { filter: brightness(1.08); }
+
+.hint { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.mode { font-size: 11px; color: var(--muted); letter-spacing: 2px; }
+.foot { margin-top: 16px; font-size: 11px; color: var(--muted); }
+.foot a { color: var(--primary); text-decoration: none; }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 14, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+@media (prefers-color-scheme: light) {
+  .overlay { background: rgba(15, 23, 42, 0.45); }
+}
+
+.overlay-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 34px 44px;
+  text-align: center;
+  box-shadow: 0 0 50px var(--glow);
+}
+.overlay-card h2 { font-size: 22px; margin-bottom: 8px; color: var(--primary); }
+.overlay-card p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+.hidden { display: none; }

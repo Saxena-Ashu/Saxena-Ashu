@@ -1,0 +1,37 @@
+<svg width="560" height="170" viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TECHVOYM architecture and scale">
+  <g>
+    <rect x="18" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="64" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">TRAFFIC</text>
+    <text x="64" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">800+ concurrent</text>
+  </g>
+  <path d="M113 86 L123 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M119 81 L123 86 L119 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="126" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="172" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#2563EB" text-anchor="middle">API</text>
+    <text x="172" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">REST · Node.js</text>
+  </g>
+  <path d="M221 86 L231 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M227 81 L231 86 L227 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="234" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="280" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0891B2" text-anchor="middle">VALIDATION</text>
+    <text x="280" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">60% fewer failures</text>
+  </g>
+  <path d="M329 86 L339 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M335 81 L339 86 L335 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="342" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="388" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#7C3AED" text-anchor="middle">DATABASE</text>
+    <text x="388" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">500+ · 300+ regs</text>
+  </g>
+  <path d="M437 86 L447 86" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <path d="M443 81 L447 86 L443 91" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="450" y="58" width="92" height="56" rx="9" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="496" y="80" font-size="10" font-family="monospace" font-weight="bold" fill="#0369A1" text-anchor="middle">MONITORING</text>
+    <text x="496" y="96" font-size="9" font-family="monospace" fill="#475569" text-anchor="middle">100% integrity</text>
+  </g>
+  <text x="280" y="140" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">Node.js · Express.js · MongoDB · HTML5 · CSS3 · JavaScript · Docker</text>
+  <text x="280" y="156" font-size="10" font-family="monospace" fill="#475569" text-anchor="middle">99.9% uptime · 72-hour registration window</text>
+</svg>
